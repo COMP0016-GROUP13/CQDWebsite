@@ -5,7 +5,7 @@ $(function() {
     // loader
     $.fakeLoader({
         spinner: "spinner3",
-        bgColor: "#fd8070"
+        bgColor: "#00a2e8"
     });
 
     // swiper slider on features

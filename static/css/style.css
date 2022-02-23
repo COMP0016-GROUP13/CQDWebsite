@@ -98,7 +98,7 @@ p:last-child {
     align-self: center;
     width: 50px;
     height: 2px;
-    background: #fd8070;
+    background: #00a2e8;
     margin-right: 10px;
 }
 
@@ -131,7 +131,7 @@ p:last-child {
 
 /* button */
 .button {
-    background: #fd8070;
+    background: #00a2e8;
     padding: 12px 30px;
     font-weight: 500;
     font-size: 15px;
@@ -197,14 +197,14 @@ p:last-child {
 .navbar .navbar-nav .current a {
     transition: all .3s;
     position: relative;
-    color: #fd8070;
+    color: #00a2e8;
 }
 
 .navbar .navbar-nav .current a::before {
     content: '';
     width: 7px;
     height: 7px;
-    background: #fd8070;
+    background: #00a2e8;
     display: inline-block;
     border-radius: 50%;
     position: absolute;
@@ -215,7 +215,7 @@ p:last-child {
 
 /* home intro */
 .home-intro {
-    background: url(../image/bg-home-red.png) no-repeat 100% 100%;
+    background: url(../image/bg-home-blue.png) no-repeat 100% 100%;
     margin-top: 90px;
     padding: 60px 40px;
 }
@@ -241,7 +241,7 @@ p:last-child {
 
 .home-intro .home-caption .button {
     background: #fff;
-    color: #fd8070;
+    color: #00a2e8;
 }
 
 .home-intro .content-image img {
@@ -266,7 +266,7 @@ p:last-child {
 }
 
 .about .content h4 {
-    color: #fd8070;
+    color: #00a2e8;
     font-weight: 800;
     margin-bottom: 5px;
     font-size: 26px;
@@ -283,7 +283,7 @@ p:last-child {
 }
 
 .requirements .content i {
-    color: #fd8070;
+    color: #00a2e8;
     display: inline-block;
     background: #feeeec;
     border-radius: 50%;
@@ -424,7 +424,7 @@ p:last-child {
 
 .members .content .title-name span {
     font-size: 15px;
-    color: #fd8070;
+    color: #00a2e8;
 }
 
 .members .swiper-container-horizontal > .swiper-pagination-bullets {
@@ -439,7 +439,7 @@ p:last-child {
 }
 
 .members .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: #fd8070;
+    background: #00a2e8;
     width: 16px;
     border-radius: 8px;
 }
@@ -474,7 +474,7 @@ form input {
 }
 
 form input:focus {
-    border-color: #fd8070;
+    border-color: #00a2e8;
 }
 
 form textarea {
@@ -488,7 +488,7 @@ form textarea {
 }
 
 form textarea:focus {
-    border-color: #fd8070;
+    border-color: #00a2e8;
 }
 
 /* responsive */
