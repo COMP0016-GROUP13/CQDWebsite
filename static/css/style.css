@@ -554,4 +554,21 @@ form textarea:focus {
 
 }
 
-/* zzzzzzzzzzzzzzzzzzz */
+/* DANIEL */
+
+.card-group {
+    box-shadow: 0 0 10px 12px rgba(0, 0, 0, 0.10);
+}
+
+.list-item {
+    background-color: #45BDFD;
+    color: black;
+    font-size: 1.3em;
+    border-width: 0.2em;
+    border-color: #020312;
+}
+
+
+
+
+
