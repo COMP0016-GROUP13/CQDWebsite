@@ -1,2 +1,2 @@
 # CQDWebsite
-The code of the CQD showing website.
+The code of the CQD report website.
