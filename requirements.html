@@ -30,7 +30,8 @@
 				<img src="static/picture/logo_2_onlylogo.png" alt="">
 				<h2>CQD</h2>
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<i class="icon ion-ios-menu"></i>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,13 +39,19 @@
 					<li class="nav-item">
 						<a class="nav-link" href="index.html">Home</a>
 					</li>
+
+                    <li class="nav-item">
+						<a class="nav-link" href="requirements.html">Requirements</a>
+					</li>
+
+
 					<!--
 					<li class="nav-item">
 						<a class="nav-link" href="index.html">Abstract</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#requirements">Requirements</a>
-					</li>
+
+					
+
 					<li class="nav-item">
 						<a class="nav-link" href="#features">Features</a>
 					</li>
@@ -66,20 +73,28 @@
             PROJECT BACKGROUND
         </div>
         <div class="h3 col text-center" style="padding: 0.5em 0 2em 0;">
-            Care Quality Dashboard, is a legacy project which has been previously developped by fellow UCL students
-            under the university's Industry Exchange Network (IXN) programme. Our team has been given the responsibility 
-            of further extending this project to allow for more functionalities, which can hugely benefit clinicians 
-            at NHS Wales. Our client, which is NHS Wales, has suggested us some additional features to be added onto 
-            the preexisting dashboard. They are:
+            <b style="font-size: 1.2em;">Care Quality Dashboard</b> is a legacy project which has been previously developped 
+            by fellow UCL students under the university's Industry Exchange Network (IXN) programme. Our team has been given 
+            the responsibility of further extending this project to allow for more functionalities, which can hugely benefit 
+            clinicians at the National  Health Service (NHS) Wales. 
+            In essence, our project aims to provide an interactive platform to allow clinicians from 
+            the said organisation to evaluate themselves frequently in order to continuously improve quality of care
+            provided to patients. Additionally, this dashboard, too, aims to provide an intuitive approach to enable 
+            Head-of-Departments monitor the progress of clinicians assigned to them. Our client is the NHS Wales, which
+            is the public healthcare system responsible for providing accessible healthcare services to the 3 million 
+            residents of Wales and they have requested some additional features to be added onto the pre-existing dashboard. 
+            The ultimate goals of this project are:
         </div>
 
     </div>
 
     <div class="col-lg-12 text-center" style="padding: 0 0 4em 0;">
         <ul class="list-group" style="width: 50em; margin: auto;" >
-            <li class="list-item list-group-item"> ---> Creating Multidashboard Functionality</li>
-            <li class="list-item list-group-item"> ---> Data Retrieval from Multidashboard</li>
-            <li class="list-item list-group-item"> ---> Bug Fixes</li>
+            <li class="list-item list-group-item">Providing Multi-dashboard Functionality for Use Across Departments</li>
+            <li class="list-item list-group-item">Maintaining Data Storage in the Multi-dashboard</li>
+            <li class="list-item list-group-item">Improving Visual Data Representation for Evaluation</li>
+            <li class="list-item list-group-item">Providing an Intuitive Interface for General Use</li>
+            <li class="list-item list-group-item">Rectifying any Bugs from the Previous Project</li>
         </ul>
     </div>
 
@@ -88,13 +103,16 @@
             <div class="col wf text-lg-center">REQUIREMENTS</div>
         </div>
     
-        <div class="text-center" style="font-size: 1.5em; padding-bottom: 1.5em;">
-            The requirements we acquire from semi-structured interviews with pseudo-users help us in the 
-            direction of our project development. Our targetted users are clinians and also head of departments
-            of hospitals under NHS Wales. They can be categorised as follows:
+        <div class="h3 text-center" style="padding-bottom: 1.5em;">
+            The requirements of our project as listed below are acquired from <i>semi-structured interviews</i> with pseudo-users to
+            help us determine the direction of our project development. For the interview, we prepare a set of <i>open-ended questions</i>
+            to be asked to our users as this type of questions can help us better understand the needs of their needs. All our interviews
+            are held in-person without the use of any forms but we record their answers and we discuss our findings in the following
+            group meeting to evaluate the importances of having certain features on our dashboard, as needed by the users. This can 
+            ensure a user-centric final product is produced. The main requirements we gathered can be categorised as follows:
         </div>
 
-        <div class="card-group" style="margin-bottom: 10em;">
+        <div class="card-group" style="margin-bottom: 5em;">
             <div class="card">
                 <img class="card-img-top" src="static/image/time.jpg">
                 <div class="card-body">
@@ -126,17 +144,159 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="container" style="padding-bottom: 5em;">
+        <div class="h1 row" style="color: #00a2e8;">
+            <div class="col wf text-lg-center">PERSONAS AND SCENARIOS</div>
+        </div>
+
+        <div class="h3 text-center" style="padding-bottom: 1.5em;">
+            Before beginning to design the dashboard, it is imperative to determine its main types of users or <i>personas</i>
+            because this can ensure that our project design is in accordance to their needs. Based on our interviews with
+            the pseudo-users, we conluded that the main users of this dashboard are regular clinicians and head-of-departments.
+            Next, we proceeded with developping scenarios on how the personas will make use of our interface. The personas and
+            scenarios for our project can be simplified as per the diagrams below:
+        </div>
+    
+        <div class="row">
+            <div class="col" style="text-align: center; padding-bottom: 5em;">
+                <img src="static/image/persona1.png">
+            </div>
+            
+            <div class="col" style="text-align:center;">
+                <img src="static/image/persona2.png">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container" style="padding-bottom: 5em;">
+        <div class="h1 row" style="color: #00a2e8;">
+            <div class="col wf text-lg-center">USE CASES DIAGRAM AND LISTS</div>
+        </div>
+
+        <div class="h3 text-center" style="padding-bottom: 1em;">
+            Below are the <i>use case diagram</i> and <i>use case lists</i> of our project that we produced in order to further understand
+            the requirements of the project apart from laying out some of the basic functionalities of 
+            the dashboard from a higher-level view.
+        </div>
+
+        <div class="col" style="text-align: center; padding-bottom: 3em;">
+            <div class="row">
+                <img src="static/image/use-case.jpg" style="max-width: 80%; height: auto;">
+            </div>
+            <caption>Use Case Diagram</caption>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <img src="static/image/use-case-list2.png" style="max-width: 48%; height: auto;" class="rounded float-left">
+                <img src="static/image/use-case-list2.png" style="max-width: 48%; height: auto;" class="rounded float-right">
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="container">
+        <div class="h1 row" style="color: #00a2e8;">
+            <div class="col wf text-lg-center">MoSCoW LIST</div>
+        </div>
+
+        <div class="h3 text-center" style="padding-bottom: 1em;">
+            The <i>MoSCoW requirements list </i>is a methodology that we implemented during development in order to
+            list out all the required features to be developped in order of their importance.
+            This way, we can focus on finishing the more important criteria given by clients first
+            before proceeding to other less prominent features. Our MoSCoW list can be seen below and our
+            requirements are categorised into functional and non-functional requirements.
+        </div>
+
+        <div class="container" style="padding: 3em 0 3em 0;">
+            <h5 class="h5 text-center" style="color: black;">Functional Requirements</h5>
+            <table class="table table-hover text-center">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 15%">Number</th>
+                        <th scope="col"style="width: 65%">Requirement</th>
+                        <th scope="col" style="width: 15%">Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <th scope="row">1</th>
+                    <td>Creating Multiple Dashboards Feature</td>
+                    <td>Must Have</td>
+                </tbody>
+                <tbody>
+                    <th scope="row">2</th>
+                    <td>Maintaining, Listing and Deleting Dashboards Feature </td>
+                    <td>Must Have</td>
+                </tbody>
+                <tbody>
+                    <th scope="row">3</th>
+                    <td>Front-End Website Navigation Restucturing</td>
+                    <td>Must Have</td>
+                </tbody>
+                <tbody>
+                    <th scope="row">4</th>
+                    <td>Data Filtering and Management of Dashboard(s) </td>
+                    <td>Should Have</td>
+                </tbody>
+                <tbody>
+                    <th scope="row">5</th>
+                    <td>Unit-Testing the Dashboard Features </td>
+                    <td>Should Have</td>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="container" style="padding: 0 0 10em 0;">
+            <h5 class="h5 text-center" style="color: black;">Non-Functional Requirements</h5>
+            <table class="table table-hover text-center">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 15%">Number</th>
+                        <th scope="col"style="width: 65%">Requirement</th>
+                        <th scope="col" style="width: 15%">Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <th scope="row">1</th>
+                    <td>New Entity Relation Diagram </td>
+                    <td>Must Have</td>
+                </tbody>
+                <tbody>
+                    <th scope="row">2</th>
+                    <td>Updated Dashboard Documentation</td>
+                    <td>Must Have</td>
+                </tbody>
+                <tbody>
+                    <th scope="row">3</th>
+                    <td>Project Updates via Development Blog </td>
+                    <td>Must Have</td>
+                </tbody>
+                <tbody>
+                    <th scope="row">4</th>
+                    <td>Prisma Schema Restructuring </td>
+                    <td>Must Have</td>
+                </tbody>
+                <tbody>
+                    <th scope="row">5</th>
+                    <td>Providing an Intuitive Web Layout </td>
+                    <td>Should Have</td>
+                </tbody>
+            </table>
+        </div>
 
     </div>
 	
-
-
     <!-- end content -->
 
 	<!-- footer bottom -->
 	<div class="container">
 		<div class="footer-bottom box-content section-bottom-only">
-			<span>Copyright © 2019-2022 CareQualityDashboard, Yipeng Qu and Daniel Bin Mohd Nasir. All Right Reserved.</span>
+			<span>Copyright © 2019-2022 CareQualityDashboard, Yipeng Qu and Daniel Bin Mohd Nasir. All Rights Reserved.</span>
 		</div>
 	</div>
 	<!-- end footer bottom -->
