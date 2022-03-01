@@ -623,8 +623,3 @@ form textarea:focus {
     border-width: 0.2em;
     border-color: #020312;
 }
-
-.card-img-top {
-    width: 100%;
-    height: 100%;
-}
