@@ -461,7 +461,7 @@ p:last-child {
 }
 
 .members .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-    background: #fec2ba;
+    background: #bac1fe;
     transition: all .3s ease;
     opacity: 1;
 }

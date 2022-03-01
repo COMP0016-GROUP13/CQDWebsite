@@ -19,7 +19,7 @@ $(function() {
 
     // swiper slider on testimonial
     $(document).ready(function () {
-        var swiper = new Swiper ('.swiper-member', {
+        var swiper = new Swiper ('.swiper-members', {
           direction: 'horizontal',
           spaceBetween: 30,
           slidesPerView: '1',
