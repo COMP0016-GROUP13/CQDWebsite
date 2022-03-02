@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>UI Design</title>
+	
+
+	<!-- font -->
+	<link href="static/css/css2.css" rel="stylesheet">
+	<!-- end font -->
+
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+	<link rel="stylesheet" href="static/css/ionicons.min.css">
+	<link rel="stylesheet" href="static/css/magnific-popup.css">
+	<link rel="stylesheet" href="static/css/fakeLoader.min.css">
+	<link rel="stylesheet" href="static/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+	<!-- loader -->
+	<div class="fakeLoader"></div>
+	<!-- end loader -->
+
+	<!-- navbar -->
+	<div style="padding: 5% 0 5% 0;">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="static/picture/logo_2_onlylogo.png" alt="">
+                    <h2>CQD</h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="icon ion-ios-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="nav" class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="requirements.html">Requirements</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="research.html">Research</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="uidesign.html">UI Design</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="systemdesign.html">System Design</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="implementation.html">Implementation</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="testing.html">Testing</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="evaluation.html">Evaluation</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="appendices.html">Appendices</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+	<!-- end navbar -->
+
+    <!-- content -->
+
+    <div class="container" style="padding: 0 0 2% 0;">
+        <div class="h1 col text-center" style="color:#00a2e8;">
+            USER INTERFACE DESIGN PRINCIPLES
+        </div>
+
+        <div class="h4 col text-center" style="padding: 0.5em 0 0 0;">
+            In order to ensure the maximum usability of our platform, it is very 
+            important to adhere to user-centric best practices throughout
+            the development process. Without the implementation of these principles,
+            the dashboard would simply cause some problems to the NHS Wales staff. 
+            Below are the main design principles that we had in mind while 
+            in the process of development:
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="accordion" style="padding: 0 0 5% 0;">
+            <div class="card" style="border-width: 0.3em;">
+                <div class="card-header text-center" id="headingOne" style="background-color: #e84d00;">
+                    <button style="text-decoration: none;"  class="btn btn-link stretched-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h4 style="color: white;">SIMPLICITY</h4>
+                    </button>
+                </div>
+          
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body text-center">
+                        To ensure that not a lot of time is taken up for the sole purpose of self-evaluations,
+                        this platform is designed to be as simple as possible to avoid unnecessary time 
+                        consumption since most NHS staff are busy with their care services.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="border-width: 0.3em;">
+                <div class="card-header text-center" id="headingTwo" style="background-color: #e84d00;">
+                    <button style="text-decoration: none;"  class="btn btn-link collapsed stretched-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h4 style="color: #ffff;">FEEDBACK PROVISION</h4>
+                    </button>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body text-center">
+                        Humans make mistakes. Realising this, we have designed our system to warn users if they
+                        have done something wrong. For instance, if a self-evaluation is not completed when submitted,
+                        an alert dialog will be issued to ensure that the form is completed. This feedback system helps
+                        the users to navigate the platform much easier.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="border-width: 0.3em;">
+                <div class="card-header text-center" id="headingThree" style="background-color: #e84d00;">
+                    <button style="text-decoration: none;" class="btn btn-link collapsed stretched-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <h4 style="color: #ffff;">VISIBILITY</h4>
+                    </button>
+                </div>
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body text-center">
+                        Since our users are of various different age groups, we designed the system with obvious and large
+                        icons whenever actions are needed. Our website font-size is also set to ensure ease in visibility 
+                        for all. Standards icons are also used throughout the website to ensure that users are aware of how
+                        to execute simple actions like closing the programme by having an (X) button.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="border-width: 0.3em;">
+                <div class="card-header text-center" id="headingFour" style="background-color: #e84d00;">
+                        <button style="text-decoration: none;" class="btn btn-link collapsed stretched-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <h4 style="color: #ffff;">CONSISTENCY</h4>
+                        </button>
+                </div>
+
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body text-center">
+                        To help users familiarise with the system, we implemented similar horizontal navigation bar throughout all
+                        the pages despite after changing webpages. In doing so, it is easier for users to navigate from one page to another.
+                        For logging in and logging out, the button can be found at the top-right of the page, which is a usual orientation
+                        for most pages and this can help user navigate through the platform more easily.  
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- content -->
+
+
+
+
+
+
+
+
+	<!-- footer bottom -->
+	<div class="container">
+		<div class="footer-bottom box-content section-bottom-only">
+			<span>Copyright © 2019-2022 CareQualityDashboard, Yipeng Qu and Daniel Bin Mohd Nasir. All Right Reserved.</span>
+		</div>
+	</div>
+	<!-- end footer bottom -->
+
+	<!-- script -->
+	<script src="static/js/jquery-3.5.1.min.js"></script>
+	<script src="static/js/bootstrap.bundle.min.js"></script>
+	<script src="static/js/magnific-popup.min.js"></script>
+	<script src="static/js/fakeLoader.min.js"></script>
+	<script src="static/js/swiper-bundle.min.js"></script>
+	<script src="static/js/contact-form.js"></script>
+	<script src="static/js/jquery.nav.js"></script>
+	<script src="static/js/main.js"></script>
+	<!-- end script -->
+
+</body>
+</html>
