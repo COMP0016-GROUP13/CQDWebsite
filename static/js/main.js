@@ -8,16 +8,8 @@ $(function() {
         bgColor: "#00a2e8"
     });
 
-    // swiper slider on features
-    $(document).ready(function () {
-        var swiper = new Swiper ('.swiper-feature', {
-          direction: 'horizontal',
-          spaceBetween: 30,
-          slidesPerView: 'auto',
-      })
-    });
 
-    // swiper slider on testimonial
+    // swiper slider on members
     $(document).ready(function () {
         var swiper = new Swiper ('.swiper-members', {
           direction: 'horizontal',
