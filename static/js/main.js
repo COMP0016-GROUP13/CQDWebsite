@@ -8,6 +8,15 @@ $(function() {
         bgColor: "#00a2e8"
     });
 
+    // swiper slider on features
+    // swiper actiity is here
+    $(document).ready(function () {
+        var swiper = new Swiper ('.swiper-features', {
+          direction: 'horizontal',
+          spaceBetween: 30,
+          slidesPerView: 'auto',
+      })
+    });
 
     // swiper slider on members
     $(document).ready(function () {
