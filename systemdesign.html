@@ -82,14 +82,57 @@
     <div class="container" style="padding: 0 0 5% 0;">
         <div class="h1 col text-center" style="color:#00a2e8;">
             System Design
-        </div>
+        </div>  
     </div>
+    <!-- end contents-->
 
 
+	<!-- frontend -->
+    <div class="container">
+            <div class="h4 text-center" style="padding-bottom: 1.5em;">
+                About the system we have a frontend authentication powered by next.js and Keycolak, 
+                which is used to connect key of the access of the middleware for authentication services.
+                Our system architecture is like this:
+            </div>
+            <div class="card-deck">
+                <div class="card">
+                <img class="card-img-bottom" src="static/picture/system-architecture.png">
+                </div>
+            </div>
+            
+	</div>
+	<!-- end frontend -->
 
+	<!-- backend -->
+    <div class="container">
+        <div class="h4 text-center" style="padding-bottom: 1.5em;">
+            <br>
+            <br>
+            
+            For the backend we use the Postgres database that use prisma to owe the object relational mapping. 
+            We also use prisma to interact with the Postgres via the backend to the website.
+        </div>
 
-
-
+        <div class="h4 text-center" style="padding-bottom: 1.5em;">
+            As the UML diagrams shows.
+            The backend can be split out of three layers, 
+            the bottom layer which kind of has semi on layers on each of them. 
+            The middle layer has the tracklist of the backend. 
+            And the top one has major details of user data. 
+            Each kind of dashboards on the top is like is like 3 parts of the dashboard. 
+            Each layer is almost independent of each of them and only got 1 or 2 connecting tables.
+        </div>
+        
+        <div class="card-deck">
+            <div class="card">
+            <img class="card-img-bottom" src="static/picture/systemsUML.jpg">
+            
+            </div>
+        </div>
+        <br>
+        <br>
+</div>
+<!-- end backend -->
 
 
 
