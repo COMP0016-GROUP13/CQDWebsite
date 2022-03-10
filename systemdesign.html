@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>System Design</title>
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Design</title>
 
-	<!-- font -->
-	<link href="static/css/css2.css" rel="stylesheet">
-	<!-- end font -->
 
-	<link rel="stylesheet" href="static/css/bootstrap.css">
-	<link rel="stylesheet" href="static/css/ionicons.min.css">
-	<link rel="stylesheet" href="static/css/magnific-popup.css">
-	<link rel="stylesheet" href="static/css/fakeLoader.min.css">
-	<link rel="stylesheet" href="static/css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="static/css/style.css">
+    <!-- font -->
+    <link href="static/css/css2.css" rel="stylesheet">
+    <!-- end font -->
+
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/ionicons.min.css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/css/fakeLoader.min.css">
+    <link rel="stylesheet" href="static/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
 
-	<!-- loader -->
-	<div class="fakeLoader"></div>
-	<!-- end loader -->
+    <!-- loader -->
+    <div class="fakeLoader"></div>
+    <!-- end loader -->
 
-	<!-- navbar -->
-	<div style="padding: 5% 0 5% 0;">
+    <!-- navbar -->
+    <div style="padding: 5% 0 5% 0;">
         <nav class="navbar navbar-expand-md navbar-light fixed-top">
             <div class="container">
                 <a href="index.html" class="navbar-brand">
@@ -39,35 +41,35 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="requirements.html">Requirements</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="research.html">Research</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="uidesign.html">UI Design</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="systemdesign.html">System Design</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="implementation.html">Implementation</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="testing.html">Testing</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="evaluation.html">Evaluation</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="appendices.html">Appendices</a>
                         </li>
@@ -76,87 +78,96 @@
             </div>
         </nav>
     </div>
-	<!-- end navbar -->
+    <!-- end navbar -->
 
     <!-- contents -->
     <div class="container" style="padding: 0 0 5% 0;">
         <div class="h1 col text-center" style="color:#00a2e8;">
             System Design
-        </div>  
+        </div>
     </div>
     <!-- end contents-->
 
 
-	<!-- frontend -->
+    <!-- frontend -->
     <div class="container">
-            <div class="h4 text-center" style="padding-bottom: 1.5em;">
-                About the system we have a frontend authentication powered by next.js and Keycolak, 
-                which is used to connect key of the access of the middleware for authentication services.
-                Our system architecture is like this:
-            </div>
-            <div class="card-deck">
-                <div class="card">
-                <img class="card-img-bottom" src="static/picture/system-architecture.png">
-                </div>
-            </div>
-            
-	</div>
-	<!-- end frontend -->
-
-	<!-- backend -->
-    <div class="container">
+        <h2>
+            System Architecture Diagram
+        </h2>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            <br>
-            <br>
-            
-            For the backend we use the Postgres database that use prisma to owe the object relational mapping. 
-            We also use prisma to interact with the Postgres via the backend to the website.
+            <br> About the system we have a frontend authentication powered by next.js and Keycolak, which is used to connect key of the access of the middleware for authentication services. Our system architecture is like this:
         </div>
-
-        <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            As the UML diagrams shows.
-            The backend can be split out of three layers, 
-            the bottom layer which kind of has semi on layers on each of them. 
-            The middle layer has the tracklist of the backend. 
-            And the top one has major details of user data. 
-            Each kind of dashboards on the top is like is like 3 parts of the dashboard. 
-            Each layer is almost independent of each of them and only got 1 or 2 connecting tables.
-        </div>
-        
         <div class="card-deck">
             <div class="card">
-            <img class="card-img-bottom" src="static/picture/systemsUML.jpg">
-            
+                <img class="card-img-bottom" src="./static/image/system_architecture.png">
+            </div>
+        </div>
+
+    </div>
+    <!-- end frontend -->
+
+    <!-- backend -->
+    <div class="container">
+        <br>
+        <br>
+
+        <h2>
+            ERD Diagram
+        </h2>
+        <div class="h4 text-center" style="padding-bottom: 1.5em;">
+            <br> For the backend we use the Postgres database that use prisma to owe the object relational mapping. We also use prisma to interact with the Postgres via the backend to the website.
+        </div>
+
+        <div class="h4 text-center" style="padding-bottom: 1.5em;">
+            As the UML diagrams shows. The backend can be split out of three layers, the bottom layer which kind of has semi on layers on each of them. The middle layer has the tracklist of the backend. And the top one has major details of user data. Each kind of
+            dashboards on the top is like is like 3 parts of the dashboard. Each layer is almost independent of each of them and only got 1 or 2 connecting tables.
+        </div>
+
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-bottom" src="./static/image/ERD.jpg">
             </div>
         </div>
         <br>
         <br>
-</div>
-<!-- end backend -->
+    </div>
+    <!-- end backend -->
 
-
-
+    <div class="container">
+        <h2>
+            SiteMap
+        </h2>
+        The Sitemap shows how our frontend is organised and how users can navigate through our website. The categories is dependent on what user type is currently accessing the website.
+        <div class="slides">
+            <div id="clinician_sitemap"> <img src="./static/image/sitemaps/Clinician_sitemap.drawio.png" alt=""> </div>
+            <div id="department_sitemap"> <img src="./static/image/sitemaps/department_sitemap.drawio.png" alt=""> </div>
+            <div id="hospital_sitemap"> <img src="./static/image/sitemaps/hospital_sitemap.drawio.png" alt=""> </div>
+            <div id="healthboard_sitemap"> <img src="./static/image/sitemaps/healthboard_sitemap.drawio.png" alt=""> </div>
+            <div id="platform_sitemap"> <img src="./static/image/sitemaps/admin_sitemap.drawio.png" alt=""> </div>
+        </div>
+    </div>
 
     <!-- contents -->
 
-	<!-- footer bottom -->
-	<div class="container">
-		<div class="footer-bottom box-content section-bottom-only">
-			<span>Copyright © 2019-2022 CareQualityDashboard, Yipeng Qu and Daniel Bin Mohd Nasir. All Right Reserved.</span>
-		</div>
-	</div>
-	<!-- end footer bottom -->
+    <!-- footer bottom -->
+    <div class="container">
+        <div class="footer-bottom box-content section-bottom-only">
+            <span>Copyright © 2019-2022 CareQualityDashboard, Yipeng Qu and Daniel Bin Mohd Nasir. All Right Reserved.</span>
+        </div>
+    </div>
+    <!-- end footer bottom -->
 
-	<!-- script -->
-	<script src="static/js/jquery-3.5.1.min.js"></script>
-	<script src="static/js/bootstrap.bundle.min.js"></script>
-	<script src="static/js/magnific-popup.min.js"></script>
-	<script src="static/js/fakeLoader.min.js"></script>
-	<script src="static/js/swiper-bundle.min.js"></script>
-	<script src="static/js/contact-form.js"></script>
-	<script src="static/js/jquery.nav.js"></script>
-	<script src="static/js/main.js"></script>
-	<!-- end script -->
+    <!-- script -->
+    <script src="static/js/jquery-3.5.1.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/magnific-popup.min.js"></script>
+    <script src="static/js/fakeLoader.min.js"></script>
+    <script src="static/js/swiper-bundle.min.js"></script>
+    <script src="static/js/contact-form.js"></script>
+    <script src="static/js/jquery.nav.js"></script>
+    <script src="static/js/main.js"></script>
+    <!-- end script -->
 
 </body>
+
 </html>

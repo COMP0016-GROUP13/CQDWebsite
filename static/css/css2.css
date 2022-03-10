@@ -1,108 +1,190 @@
 /* hebrew */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
-  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
 }
+
+
 /* latin */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+
 /* hebrew */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
-  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
 }
+
+
 /* latin */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+
 /* hebrew */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
-  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
 }
+
+
 /* latin */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+
 /* hebrew */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
-  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
 }
+
+
 /* latin */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+
 /* hebrew */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
-  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
 }
+
+
 /* latin */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+
 /* hebrew */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
-  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
+    unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
 }
+
+
 /* latin */
+
 @font-face {
-  font-family: 'Heebo';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-family: 'Heebo';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(../font/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.slider {
+    width: 900px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slides>div {
+    flex-shrink: 0;
+    width: 900px;
+    height: 400px;
+    background: #fff;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider>a {
+    margin-right: 20px;
+    border-width: 2000px;
+    border-radius: 25%;
+    color: #1c87c9;
 }
