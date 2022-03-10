@@ -53,26 +53,29 @@
                         <li class="nav-item">
                             <a class="nav-link" href="uidesign.html">UI Design</a>
                         </li>
+                        <<<<<<< HEAD <li class="nav-item">
+                            =======
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="systemdesign.html">System Design</a>
-                        </li>
+                            <li class="nav-item current">
+                                >>>>>>> c434e5126bde81df388a4c8249c04ca55e110248
+                                <a class="nav-link" href="systemdesign.html">System Design</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="implementation.html">Implementation</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="implementation.html">Implementation</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="testing.html">Testing</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="testing.html">Testing</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="evaluation.html">Evaluation</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="evaluation.html">Evaluation</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="appendices.html">Appendices</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="appendices.html">Appendices</a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -95,7 +98,9 @@
             System Architecture Diagram
         </h2>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            <br> About the system we have a frontend authentication powered by next.js and Keycolak, which is used to connect key of the access of the middleware for authentication services. Our system architecture is like this:
+            About the system we have a frontend authentication powered by next.js and Keycolak, which is used to connect key of the access of the middleware for authentication services. The entire system is containerised via Docker. And the Keycloak is used as the
+            identity and access management tool, with a single instance hosted alongside the web-app. NextAuth.js facilitates interaction between the web-app and the Keycloak OpenID Connect interface. In addition, various API routes internally use the
+            Keycloak Admin REST API to interact with Keycloak when certain actions are performed.
         </div>
         <div class="card-deck">
             <div class="card">
@@ -115,21 +120,40 @@
             ERD Diagram
         </h2>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            <br> For the backend we use the Postgres database that use prisma to owe the object relational mapping. We also use prisma to interact with the Postgres via the backend to the website.
+            <<<<<<< HEAD <br> For the backend we use the Postgres database that use prisma to owe the object relational mapping. We also use prisma to interact with the Postgres via the backend to the website. =======
+                <br>
+                <br> For the backend we use the Postgres database that use prisma to owe the object relational mapping. We also use prisma to interact with the Postgres via the backend to the website. The system contains 2 PostgreSQL databases, both within
+                a single dockerised PostgreSQL instance: "care_quality_dashboard" and "keycloak". >>>>>>> c434e5126bde81df388a4c8249c04ca55e110248
         </div>
+
+
+        <div class="h4 text-center" style="padding-bottom: 1.5em;">
+            The "keycloak" database is entirely managed by Keycloak in the Keycloak Docker Container.<br> The "care_quality_dashboard" database is the system's own database storing information such as responses, questions, departments, hospitals, etc.
+            An ER-UML diagram is below:
+
+        </div>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-bottom" src="static/picture/ER-UMLdiagram.jpeg">
+
+            </div>
+        </div>
+
+        <br>
+        <br>
 
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
             As the UML diagrams shows. The backend can be split out of three layers, the bottom layer which kind of has semi on layers on each of them. The middle layer has the tracklist of the backend. And the top one has major details of user data. Each kind of
             dashboards on the top is like is like 3 parts of the dashboard. Each layer is almost independent of each of them and only got 1 or 2 connecting tables.
         </div>
-
-        <div class="card-deck">
+        <<<<<<< HEAD <div class="card-deck">
             <div class="card">
                 <img class="card-img-bottom" src="./static/image/ERD.jpg">
             </div>
-        </div>
-        <br>
-        <br>
+    </div>
+    ======= >>>>>>> c434e5126bde81df388a4c8249c04ca55e110248
+    <br>
+    <br>
     </div>
     <!-- end backend -->
 

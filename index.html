@@ -5,18 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team 13 - Care Quality Dashboard Project Website</title>
+    <!-- loader -->
+    <div class="fakeLoader"></div>
+    <!-- end loader -->
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="static/picture/logo_2_onlylogo.png" alt="">
+                <h2>CQD</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="icon ion-ios-menu"></i>
+			</button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul id="nav" class="navbar-nav ml-auto">
+                    <li class="nav-item current">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="requirements.html">Requirements</a>
+                    </li>
+                    >>>>>>> c434e5126bde81df388a4c8249c04ca55e110248
 
 
-    <!-- font -->
-    <link href="static/css/css2.css" rel="stylesheet">
-    <!-- end font -->
+                    <!-- font -->
+                    <link href="static/css/css2.css" rel="stylesheet">
+                    <!-- end font -->
 
-    <link rel="stylesheet" href="static/css/bootstrap.css">
-    <link rel="stylesheet" href="static/css/ionicons.min.css">
-    <link rel="stylesheet" href="static/css/magnific-popup.css">
-    <link rel="stylesheet" href="static/css/fakeLoader.min.css">
-    <link rel="stylesheet" href="static/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="static/css/style.css">
+                    <link rel="stylesheet" href="static/css/bootstrap.css">
+                    <link rel="stylesheet" href="static/css/ionicons.min.css">
+                    <link rel="stylesheet" href="static/css/magnific-popup.css">
+                    <link rel="stylesheet" href="static/css/fakeLoader.min.css">
+                    <link rel="stylesheet" href="static/css/swiper-bundle.min.css">
+                    <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
@@ -111,24 +135,20 @@
         <div id="about" class="about box-content section-bottom-only">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="content-left">
-                                <div class="img">
-                                    <img src="static/picture/logo_2_after.png" alt="">
-                                </div>
-                            </div>
+                    <div class="content-left">
+                        <div class="img">
+                            <img src="static/picture/logo_2_after.png">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="content-right">
-                        <div class="section-title">
-                            <h5><span class="line-title"></span> Abstract</h5>
-                            <h3>About Care Quality Dashboard (CQD)</h3>
-                        </div>
+                    <div class="content-right section-title" style="margin: 11% 0 0 0;">
+                        <h5><span class="line-title"></span> Abstract</h5>
+                        <h3>About Care Quality Dashboard (CQD)</h3>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-12">
                     <style>
                         p {
@@ -136,13 +156,24 @@
                         }
                     </style>
                     <p>
-                        Large influx of patients coming in to receive treatment, especially during the Covid-19 pandemic. Consequently, it is imperative for NHSW to provide the best quality of treatment to patients as outlined by the Welsh Government's Health and Care Standards.
-                        In line with the constant need of top-notch care services, our team has come up with an idea on how to help clinicians evaluate themselves for keeping their care quality in check. That is how Care Quality Dashboard was created.
+                        <h5>PROBLEM STATEMENT</h5>
+                        At present, a large influx of patients are coming in to receive treatment from the National Health Service Wales (NHSW), especially during the Covid-19 pandemic. Consequently, it is imperative for the NHSW to provide the best quality of treatment to patients
+                        as outlined by the Welsh Government's Health and Care Standards. Since doctors are becoming busier over time, the care quality provided by the clinicians from NHSW may be affected and this can cause a huge disruption in the healthcare
+                        services of the nation.
                     </p>
 
                     <p>
-                        Through the integration of our system into the NHSW, clinicians are able to continuously self-evaluate and measure the quality of their services against the NHSW standards. On top of that, Head-of-Departments, too, are able to supervise fellow clinicians
-                        in an effort to ensure constant quality treatment. Currently, we can proudly say that our system is currently in use in the NHS Wales and we are continuously trying to improve on the pre-existing interface.
+                        <h5>OUR SOLUTION</h5>
+                        In line with the constant need of top-notch care services, our team has come up with an idea on how to help clinicians evaluate themselves for keeping their care quality in check. That is how Care Quality Dashboard, or CQD in short, was created. CQD is
+                        an online platform which allows clinicans from various different departments to self-report their progress in care services provided to patients. This platform also provides an intuitive interface for supervision on clinicians
+                        as an effort to maintain patients' satisfaction by the services provided.
+                    </p>
+
+                    <p>
+                        <h5>PROJECT ACHIEVEMENT AND IMPACT</h5>
+                        Through the integration of our system into the NHSW, clinicians have been able to continuously self-evaluate and measure the quality of their services against the NHSW standards. On top of that, Head-of-Departments, too, are able to supervise fellow clinicians
+                        in an effort to ensure constant quality treatment. Currently, we can proudly say that our system is currently in use in the NHS Wales and we are continuously trying to improve on the pre-existing interface by adding more useful
+                        features. As a result, we hope that the clinians are able to see their improvements over time by using the Care Quality Dashboard.
                     </p>
 
                     <div class="text-center">
@@ -259,7 +290,7 @@
                                 <div class="image-overlay"></div>
                                 <img src="static/picture/features1.jpg" alt="image-demo">
                                 <div class="features-caption">
-                                    <h4>Graphic Design</h4>
+                                    <h4>Graphical Design</h4>
                                     <span>Physical aesthetics</span>
                                 </div>
                             </div>
@@ -284,7 +315,7 @@
                                 <img src="static/picture/features3.jpg" alt="image-demo">
                                 <div class="features-caption">
                                     <h4>User-Centered Design</h4>
-                                    <span>Easy to use by doctors and nurses</span>
+                                    <span>Easy to use by clinicians</span>
                                 </div>
                             </div>
                         </a>
@@ -296,7 +327,7 @@
                                 <img src="static/picture/features4.jpg" alt="image-demo">
                                 <div class="features-caption">
                                     <h4>Management</h4>
-                                    <span>The newly maintaince system</span>
+                                    <span>Constantly updated system</span>
                                 </div>
                             </div>
                         </a>
@@ -398,14 +429,16 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                            <div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
                         </div>
                         <div class="testi-icon">
                             <img class="icon-left" src="static/picture/quote-icon1.svg" alt="">
@@ -430,11 +463,16 @@
                     </div>
 
                     <div class="card-deck">
-                        <div class="card">
-                            <img class="card-img-top" src="static/image/gantt1.png">
+                        <div class="row">
+                            <div class="card">
+                                <img class="card-img-top" src="static/image/gantt1.png">
+                            </div>
                         </div>
-                        <div class="card">
-                            <img class="card-img-top" src="static/image/gantt2.png">
+
+                        <div class="row">
+                            <div class="card">
+                                <img class="card-img-top" src="static/image/gantt2.png">
+                            </div>
                         </div>
                     </div>
                 </div>
