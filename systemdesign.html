@@ -92,7 +92,15 @@
             <div class="h4 text-center" style="padding-bottom: 1.5em;">
                 About the system we have a frontend authentication powered by next.js and Keycolak, 
                 which is used to connect key of the access of the middleware for authentication services.
-                Our system architecture is like this:
+                The entire system is containerised via Docker.
+                And the     Keycloak is used as the identity and access management tool, 
+                with a single instance hosted alongside the web-app. 
+                NextAuth.js facilitates interaction between the web-app and the Keycloak OpenID Connect interface. 
+                In addition, various API routes internally use the Keycloak Admin REST API to 
+                interact with Keycloak when certain actions are performed.
+            </div>
+            <div class="h3 text-center" style="padding-bottom: 1.5em;">
+                Our system architecture shows like this:
             </div>
             <div class="card-deck">
                 <div class="card">
@@ -111,7 +119,27 @@
             
             For the backend we use the Postgres database that use prisma to owe the object relational mapping. 
             We also use prisma to interact with the Postgres via the backend to the website.
+            The system contains 2 PostgreSQL databases, 
+            both within a single dockerised PostgreSQL instance: "care_quality_dashboard" and "keycloak".
         </div>
+
+
+        <div class="h4 text-center" style="padding-bottom: 1.5em;">
+            The "keycloak" database is entirely managed by Keycloak in the Keycloak Docker Container.<br>
+            The "care_quality_dashboard" database 
+            is the system's own database storing information such as responses, 
+            questions, departments, hospitals, etc. An ER-UML diagram is below:
+
+        </div>
+        <div class="card-deck">
+            <div class="card">
+            <img class="card-img-bottom" src="static/picture/ER-UMLdiagram.jpeg">
+            
+            </div>
+        </div>
+
+        <br>
+        <br>
 
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
             As the UML diagrams shows.
@@ -123,12 +151,7 @@
             Each layer is almost independent of each of them and only got 1 or 2 connecting tables.
         </div>
         
-        <div class="card-deck">
-            <div class="card">
-            <img class="card-img-bottom" src="static/picture/systemsUML.jpg">
-            
-            </div>
-        </div>
+
         <br>
         <br>
 </div>
