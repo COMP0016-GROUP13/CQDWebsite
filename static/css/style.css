@@ -472,6 +472,34 @@ p:last-child {
     border-radius: 8px;
 }
 
+/* testmonials */
+.testmonials .content-left {
+    text-align: center;
+}
+
+.testmonials .content-left img {
+    width: calc(100% - 30%);
+    border-radius: 10px;
+}
+
+.testmonials .content {
+    background: #f4f7fc;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.testmonials .content h4 {
+    color: #00a2e8;
+    font-weight: 800;
+    margin-bottom: 5px;
+    font-size: 26px;
+}
+
+.testmonials .content span {
+    font-size: 14px;
+}
+
 /* timeline */
 .timeline .content-left {
     text-align: center;
