@@ -31,7 +31,7 @@
             <div class="container">
                 <a href="index.html" class="navbar-brand">
                     <img src="static/picture/logo_2_onlylogo.png" alt="">
-                    <h2>CQD</h2>
+                    <h2 style="color:#00a2e8;">CQD</h2>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="icon ion-ios-menu"></i>
@@ -93,9 +93,10 @@
 
     <!-- frontend -->
     <div class="container">
-        <h2>
+        <h2 style="color:#00a2e8;">
             System Architecture Diagram
         </h2>
+        <br>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
             About the system we have a frontend authentication powered by next.js and Keycolak, which is used to connect key of the access of the middleware for authentication services. The entire system is containerised via Docker. And the Keycloak is used as the
             identity and access management tool, with a single instance hosted alongside the web-app. NextAuth.js facilitates interaction between the web-app and the Keycloak OpenID Connect interface. In addition, various API routes internally use the
@@ -114,7 +115,7 @@
     <div class="container">
         <br>
         <br>
-        <h2>
+        <h2 style="color:#00a2e8;">
             ERD Diagram
         </h2>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
@@ -155,21 +156,69 @@
     </div>
     <!-- end backend -->
 
+    <!-- sitemap -->
     <div class="container">
-        <h2>
+        <h2 style="color:#00a2e8;">
             SiteMap
         </h2>
-        The Sitemap shows how our frontend is organised and how users can navigate through our website. The categories is dependent on what user type is currently accessing the website.
-        <div class="slides">
-            <div id="clinician_sitemap"> <img src="./static/image/sitemaps/Clinician_sitemap.drawio.png" alt=""> </div>
-            <div id="department_sitemap"> <img src="./static/image/sitemaps/department_sitemap.drawio.png" alt=""> </div>
-            <div id="hospital_sitemap"> <img src="./static/image/sitemaps/hospital_sitemap.drawio.png" alt=""> </div>
-            <div id="healthboard_sitemap"> <img src="./static/image/sitemaps/healthboard_sitemap.drawio.png" alt=""> </div>
-            <div id="platform_sitemap"> <img src="./static/image/sitemaps/admin_sitemap.drawio.png" alt=""> </div>
+        <br>
+        <div class="h4 text-center" style="padding-bottom: 1.5em;">
+        The Sitemap shows how our frontend is organised and how users can navigate through our website. 
+        The categories is dependent on what user type is currently accessing the website.
+        </div>
+    
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+    
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="./static/image/sitemaps/Clinician_sitemap.drawio.png" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="./static/image/sitemaps/department_sitemap.drawio.png" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="./static/image/sitemaps/hospital_sitemap.drawio.png" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="./static/image/sitemaps/healthboard_sitemap.drawio.png" style="width:100%">
+                <div class="text">Caption Four</div>
+            </div>
+    
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="./static/image/sitemaps/admin_sitemap.drawio.png" style="width:100%">
+                <div class="text">Caption Five</div>
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>                        
         </div>
     </div>
-
-    <!-- contents -->
+    <br>
+    <br>
+    <!-- end sitemap -->
 
     <!-- footer bottom -->
     <div class="container">
@@ -188,6 +237,7 @@
     <script src="static/js/contact-form.js"></script>
     <script src="static/js/jquery.nav.js"></script>
     <script src="static/js/main.js"></script>
+    <script src="static/js/slider.sysdesign.js"></script>
     <!-- end script -->
 
 </body>
