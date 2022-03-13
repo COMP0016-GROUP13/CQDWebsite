@@ -140,7 +140,7 @@
             TECHNOLOGY REVIEW
         </div>
 
-        <div>
+        <div class="container">
             <div class="h2 col text-center" style="color:#00a2e8; border-style: dashed;">
                 WEB DEVELOPMENT PROGRAMMING LANGUAGE
             </div>
@@ -161,35 +161,103 @@
                 Also, JavaScript has the advantage of speed, which is useful to save time of the clinicians using our platform. The image below depicts the 
                 statistics mentioned above<span style="color: #e84d00;"> [7]</span>. <br><br>
 
+                Finally, we have decided to develop or project using JavaScript because of all the possible benefits and convenience 
+                that we can gain by its usage. Not to forget, since this is a legacy project written mostly in JavaScript, it would be 
+                hard for us to rewrite all of the exisiting code using another language as this will consume a lot of our time.<br><br>
+
                 <div class="container">
                     <img src="static/image/most-used-language.png" style="width:100%; margin: 0 0 2.5% 0;">
                 </div>
             </div>
         </div>
 
-        <div>
+        <div class="container">
             <div class="h2 col text-center" style="color:#00a2e8; border-style: dashed;">
-                WEB DEVELOPMENT FRAMEWORK
+                WEB DEVELOPMENT LIBRARY AND FRAMEWORK
             </div>
 
             <div class="h4 col text-center" style="margin: 1em 0 2em 0;">
-                lorem epsum
-                
+                After deciding to use JavaScript as our main programming language, we explored the various different libraries available for 
+                use. For our front-end, we decided that React is suitable to be integrated into our system due to several deciding factors but largely 
+                due to the fact that it is the most popular libraries in use for website development, with competition from Angular and Vue.js. According 
+                to npm-stat, about 500 million downloads of React has been recorded in 2021 alone. With this large community using the library, we believe
+                there must be great support available for helping our project development<span style="color: #e84d00;"> [8]</span>. Some of the many 
+                advantages of incorporating this library in our project include increased speed and performance of the website.
+                <span style="color: #e84d00;"> [9]</span>. <br><br>
+
+                <div class="container">
+                    <img src="static/image/react-stats.png" style="width:100%; margin: 0 0 2.5% 0;">
+                </div>
+
+                As React is a good choice of library for web-development, we decided to implement Next.js as the framework for React in order to develop single page 
+                Javascript applications<span style="color: #e84d00;"> [10]</span>. React is built on top of Node.js, which enables React-based functionalities including server-side rendering. Below are some of the 
+                benefits we can gain by implementing the Next.js framework. <br><br>
+
+                <div class="container">
+                    <li>
+                        <span style="color: #00a2e8;">Server-side Rendering (SSR)</span> - React components on the front-end of the website are rendered on the server side. This
+                        leads to a much faster loading time for users<span style="color: #e84d00;"> [11]</span>
+                    </li>
+                    <li>
+                        <span style="color: #00a2e8;">Automatic Code Splitting</span> - Reducing the size of the application by splitting the codes into smaller pieces or chunks 
+                        and only load the chunks as needed. This also increases the speed of loading for the webpages<span style="color: #e84d00;"> [12]</span>
+                    </li>
+                    <li>
+                        <span style="color: #00a2e8;">Static Page Generation</span> - Websites are rendered at build time to output static HTML files along with assets such as 
+                        JavaScript and CSS. This ultimately results in an <i>ultra fast</i> loading experience for all users, according to Next.js themselves.<span style="color: #e84d00;"> [13]</span>
+                    </li><br>
+                </div>
             </div>
         </div>
 
-        <div>
+        <div class="container">
             <div class="h2 col text-center" style="color:#00a2e8; border-style: dashed;">
                 LOGIN SYSTEM
             </div>
 
             <div class="h4 col text-center" style="margin: 1em 0 2em 0;">
-                lorem epsum
+                To ensure that users can authenticate themselves in order to use the dashboard, it is incredibly important to have a secure way of logging in users into the system. It
+                is also important to find a system, which is easily understood by users as we do not want to over-complicate them. Therefore, we considered two different login systems:
+                Keycloak and NHS Identity. <br><br>
+
+                At first we are very inclined towards NHS Identity because it should be intuitive to use by NHS users as the system has already been implemented within the organisation.
+                NHS Identity is actually the current technology for healthcare personnels to authenticate themselves for accessing England's clinical information systems<span style="color: #e84d00;"> [14]</span>.
+                However, after doing some research, we found out that this system may not be able to be used for our platform due to several reasons. Firstly, NHS Identity is mostly 
+                in use in England for NHS England. Therefore, it is quite hard for our dashboard to be used by NHS Wales if we choose to utilise this login system because most clinicians in 
+                Wales cannot even access it. Secondly, only staff with a smart card can authenticate themselves using the NHS Identity. In fact, not all NHS staff have the card mentioned above, hence, 
+                this method may not be viable for our self-evaluating platform. <br><br>
+
+                Keycloak is another option that we have at hand. According to its documentation, Keycloak is an identity and access management solution (IAM) which has been used by various 
+                applications for authentication purposes and it was developped by RedHat, the largest open-source software manufacturer<span style="color: #e84d00;"> [15]</span>. 
+                It is a secure authentication system with multiple useful features, which will be a good fit to be integrated into 
+                our dashboard<span style="color: #e84d00;"> [16]</span>. Some of the features include high-performnance due its lightweight nature, Single Sign-On (SSO) for multiple applications and centralised management for 
+                users and administrations. Below is the simplification of all the features, taken from its official website,
+                that shows how Keycloak would make a good candidate for us to manage our login system<span style="color: #e84d00;"> [17]</span>.
                 
+                <div class="container">
+                    <img src="static/image/keycloak-benefits.png" style="width:100%; margin: 2.5% 0 0 0;">
+                </div>
+
             </div>
         </div>
-        
+    </div>
 
+    <div class="container" style="padding: 0 0 5% 0;">
+        <div class="h1 col text-center" style="color:#00a2e8;">
+            SUMMARY
+        </div>
+
+        <div class="h3 col text-center">
+            As a conclusion, we would like to reiterate our main technical choices for this project:
+        </div>
+
+
+        <div class="h4 col text-center" style="margin: 1em 0 2em 0;">
+            1) JavaScript would be our primary programming language<br>
+            2) The JavaScript library that we chose is React along with its framework Next.js<br>
+            3) Our system's login will be handled by Keycloak
+            
+        </div>
 
 
     </div>
@@ -202,11 +270,23 @@
         </div>
 
         <div class="h5">
-            <span style="color: #e84d00;">[1] </span>loremepsum<br>
-            <span style="color: #e84d00;">[2] </span>loremepsum<br>
-            <span style="color: #e84d00;">[3] </span>loremepsum<br>
-            <span style="color: #e84d00;">[4] </span>loremepsum<br>
-            <span style="color: #e84d00;">[5] </span>loremepsum<br>
+            <span style="color: #e84d00;">[1] </span>UCL Computer Science. 2021. UCL Industry Exchange Network (UCL IXN). [online] Available at: <a href="https://www.ucl.ac.uk/computer-science/collaborate/ucl-industry-exchange-network-ucl-ixn" style="color: #00a2e8;">https://www.ucl.ac.uk/computer-science/collaborate/ucl-industry-exchange-network-ucl-ixn</a> [Accessed 20 October 2021].<br>
+            <span style="color: #e84d00;">[2] </span>Jain, S., Zielinski, M. and Schulz, M., 2021. GitHub - UCLComputerScience/COMP0016_2020_21_Team20. [online] GitHub. Available at: <a href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team20" style="color: #00a2e8">https://github.com/UCLComputerScience/COMP0016_2020_21_Team20</a> [Accessed 21 October 2021].<br>
+            <span style="color: #e84d00;">[3] </span>GitHub. 2021. README.md. [online] Available at: <a href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/README.md" style="color: #00a2e8">https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/README.md</a> [Accessed 23 October 2021].<br>
+            <span style="color: #e84d00;">[4] </span>GitHub. 2022. ARCHITECTURE.md. [online] Available at: <a href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/ARCHITECTURE.md" style="color: #00a2e8">https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/ARCHITECTURE.md</a> [Accessed 23 October 2021].<br>
+            <span style="color: #e84d00;">[5] </span>Computer.org. n.d. 5 Reasons JavaScript is Still Better Than Python. [online] Available at: <a href="https://www.computer.org/publications/tech-news/build-your-career/5-reasons-javascript-is-still-better-than-python" style="color: #00a2e8">https://www.computer.org/publications/tech-news/build-your-career/5-reasons-javascript-is-still-better-than-python</a> [Accessed 27 October 2021].<br>
+            <span style="color: #e84d00;">[6] </span>Habr. 2019. Python vs JavaScript: Which One Can Benefit You The Most?. [online] Available at: <a href="https://habr.com/en/post/471134/" style="color: #00a2e8">https://habr.com/en/post/471134/</a> [Accessed 27 October 2021].<br>
+            <span style="color: #e84d00;">[7] </span>Stack Overflow. 2021. Stack Overflow Developer Survey 2021. [online] Available at: <a href="https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages" style="color: #00a2e8">https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages</a> [Accessed 2 November 2021].<br>
+            <span style="color: #e84d00;">[8] </span>Imaginary Cloud. 2021. Next.js vs React: What are the differences?. [online] Available at: <a href="https://www.imaginarycloud.com/blog/next-js-vs-react/" style="color: #00a2e8">https://www.imaginarycloud.com/blog/next-js-vs-react/</a> [Accessed 1 January 2022].<br>
+            <span style="color: #e84d00;">[9] </span>Da-14.com. 2017. Top 10 Advantages of Using React.js. [online] Available at: <a href=https://da-14.com/blog/its-high-time-reactjs-ten-reasons-give-it-try style="color: #00a2e8">https://da-14.com/blog/its-high-time-reactjs-ten-reasons-give-it-try</a> [Accessed 7 November 2021].<br>
+            <span style="color: #e84d00;">[10] </span>Nextjs.org. n.d. Next.js by Vercel - The React Framework. [online] Available at: <a href=https://nextjs.org style="color: #00a2e8">https://nextjs.org</a> [Accessed 2 November 2021].<br>
+            <span style="color: #e84d00;">[11] </span>freeCodeCamp.org. 2020. Why You Should Learn Next.js as a React Developer. [online] Available at: <a href="https://www.freecodecamp.org/news/why-you-should-learn-next-js-as-a-react-developer/" style="color: #00a2e8">https://www.freecodecamp.org/news/why-you-should-learn-next-js-as-a-react-developer/</a> [Accessed 14 November 2021].<br>
+            <span style="color: #e84d00;">[12] </span>Educative: Interactive Courses for Software Developers. n.d. What is code splitting in Next.js?. [online] Available at: <a href=https://www.educative.io/edpresso/what-is-code-splitting-in-nextjs style="color: #00a2e8">https://www.educative.io/edpresso/what-is-code-splitting-in-nextjs</a> [Accessed 18 November 2021].<br>
+            <span style="color: #e84d00;">[13] </span>Nextjs.org. n.d. Advanced Features: Automatic Static Optimization | Next.js. [online] Available at: <a href=https://nextjs.org/docs/advanced-features/automatic-static-optimization style="color: #00a2e8">https://nextjs.org/docs/advanced-features/automatic-static-optimization</a> [Accessed 5 November 2021].<br>
+            <span style="color: #e84d00;">[14] </span>NHS Digital. n.d. NHS Care Identity Service 2. [online] Available at: <a href=https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2 style="color: #00a2e8">https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2</a> [Accessed 20 November 2021].<br>
+            <span style="color: #e84d00;">[15] </span>Aoe.com. n.d. Keycloak: Secure & easy Identity & Access Management. [online] Available at: <a href=https://www.aoe.com/en/expertise/keycloak.html style="color: #00a2e8">https://www.aoe.com/en/expertise/keycloak.html</a> [Accessed 25 November 2021].<br>
+            <span style="color: #e84d00;">[16] </span>AG, I., n.d. Keycloak Benefits. [online] Keycloak.ch. Available at: <a href=https://keycloak.ch/keycloak-benefits style="color: #00a2e8">https://keycloak.ch/keycloak-benefits</a> [Accessed 30 November 2021].<br>
+            <span style="color: #e84d00;">[17] </span>Team, K., n.d. Keycloak. [online] Keycloak.org. Available at: <a href=https://www.keycloak.org style="color: #00a2e8">https://www.keycloak.org</a> [Accessed 30 November 2021].<br>
         </div>
 
 
