@@ -145,6 +145,25 @@
     </div>
     <!-- end backend -->
 
+    <!-- packages and api -->
+    <div class="container">
+        <h2 style="color:#00a2e8;">
+            Packages and API Used
+        </h2>
+        <br>
+        <div class="h4 text-center" style="padding-bottom: 1.5em;">
+            The system's backend consists primarily of Next.js API routes to create a REST API that is consumed by the React-based frontend.
+            The REST API documentation exists in the form of an OpenAPI 3 (Swagger) specification. 
+            Consequently, the system is interact with Keycloak via the Keycloak Admin REST API -- 
+            all actions that can be performed through the Keycloak Admin Console can also be performed through this Admin REST API.
+            The Keycloak Admin REST API was only ever be used when running code on the server-side on API routes. 
+            The admin credentials are required to generate an admin access token for use in the Admin REST API requests.
+        </div>
+
+    </div>
+
+    <!-- end packages and api -->
+
     <!-- sitemap -->
     <div class="container">
         <h2 style="color:#00a2e8;">
