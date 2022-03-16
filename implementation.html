@@ -116,8 +116,11 @@
             Visualisations
         </h2>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            For a given dashboard most users can navigate to the statistics page where they can view a graph of their overall progress. The system makes use of the “Line” component from the ‘react-chartjs-2’ library which is a react wrapper for the Chart.js library.
-            Since Chart.js is a client-side JavaScript library we are required to have a specific format to render the graph. Therefore, we formatted the data from our API call to our PostgreSQL to match the correct format.
+            For a given dashboard most users can navigate to the statistics page where they can view a graph of their overall progress.
+            <br> As each score is stored from 0 to 4. To represent the score as a percentage, we do a simple calculation:
+            <br> Percentage = (score / 4) * 100
+            <br>As a result, we can plot the Score as a percentage on the Y axis and the Time in Days on the X axis.
+
         </div>
     </div>
 
