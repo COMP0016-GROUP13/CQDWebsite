@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Team 13 - Care Quality Dashboard Project Website</title>
+	
+
+	<!-- font -->
+	<link href="static/css/css2.css" rel="stylesheet">
+	<!-- end font -->
+
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+	<link rel="stylesheet" href="static/css/ionicons.min.css">
+	<link rel="stylesheet" href="static/css/magnific-popup.css">
+	<link rel="stylesheet" href="static/css/fakeLoader.min.css">
+	<link rel="stylesheet" href="static/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+	<!-- loader -->
+	<div class="fakeLoader"></div>
+	<!-- end loader -->
+
+	<!-- navbar -->
+	<div style="padding: 5% 0 5% 0;">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="static/picture/logo_2_onlylogo.png" alt="">
+                    <h2>CQD</h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="icon ion-ios-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="nav" class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+    
+                        <li class="nav-item">
+                            <a class="nav-link" href="requirements.html">Requirements</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="research.html">Research</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="uidesign.html">UI Design</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="systemdesign.html">System Design</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="implementation.html">Implementation</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="testing.html">Testing</a>
+                        </li>
+
+						<li class="nav-item">
+                            <a class="nav-link" href="evaluation.html">Evaluation</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="appendices.html">Appendices</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+	<!-- end navbar -->
+
+	<!-- home intro -->
+    <div class="container">
+	<p><strong>Legal Statement</strong></p>
+<p>This project was developed for UCL&rsquo;s Industry Exchange ******* (IXN) programmed and this software is a proof-of-concept for development purposes without further testing and/or redevelopment. No **** data or personal *********** should be stored ***** this software. Its ***** and liabilities are your own when you use this application.</p>
+<p>The software is in early proof of concept for development purposes and should not be used as-is in a live environment without further redevelopment and/or testing. No warranty is given, and no real data or personally identifiable **** should ** stored. Usage and its liabilities are your own.</p>
+<p>The software is licensed under the <a href="https://github.com/COMP0016-GROUP13/CareQualityDashboard/blob/main/LICENSE"><u><span>AGPLv3 license</span></u></a> and *** source-code can be found <a href="https://github.com/COMP0016-GROUP13/CareQualityDashboard"><u><span>here.</span></u></a> Any images used ** the platform are attributed where necessary. <a href="https://icons8.com/"><u><span>Icons8</span></u></a> is used for ************* in some ***** of the website.</p>
+<p><strong>Client</strong>: ** ****** Connor (NHS, IXN).<br><strong>Supervisors and Teaching Assistants</strong>: ********* Chen (UCL).</p>
+<p><strong>Project developed by:</strong></p>
+<ul type="disc">
+    <li><span>Sarvesh Rajdev&nbsp;</span></li>
+    <li><span>Nathan D&rsquo;Souza</span></li>
+    <li><span>Ahmad Daniel</span></li>
+    <li><span>****** Qu</span></li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Data ******* and Protection</strong></p>
+<p>The ******* system currently only collects the minimal personal data for all users. Login *** ******** details *** ********* to Keycloak.</p>
+<p>Other information which may ** logged includes *** Internet Protocol (IP) address, browser **** and operating system.</p>
+<p>Since data ********** ** our main concern, no data ** ****** or processed ******* users&rsquo; consent. *** system also complies with *** ********* 7 Rules, which focuses on protecting patient confidentiality.</p>
+<p>All users **** agree **** all ******** data collected</p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Sustainability and Costing</strong></p>
+<p>At present, our ******** is ****** ** a Linode Virtual Private Server (VPS), which has been provided to us and paid for by *** client.</p>
+<p>&nbsp;</p>
+<p><strong>Licenses and ************ property</strong></p>
+<p>All the dependencies used in this project **** been allowed for commercial use. Below is an ********* list of all *** dependencies included:</p>
+<table cellpadding="0" cellspacing="0">
+    <tbody>
+        <tr>
+            <td>
+                <p><strong>Dependency</strong></p>
+            </td>
+            <td>
+                <p><strong>License Type</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Material UI</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Prisma</p>
+            </td>
+            <td>
+                <p>Apache-2.0</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Next Less</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Chart Js</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Env-cmd</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>formik</p>
+            </td>
+            <td>
+                <p>Apache-2.0</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Less</p>
+            </td>
+            <td>
+                <p>Apache-2.0</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Next</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Next-auth</p>
+            </td>
+            <td>
+                <p>ISC</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Next-transpile-modules</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Node-fetch</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Openapi-response-validator</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>pg</p>
+            </td>
+            <td>
+                <p>BSD-2-Clause</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Prop-types</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Query-string</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>react</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>React-bootstrap</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>React-chartjs-2</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>React-copy-to-clipboard</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>React-dom</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>rsuite</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Styled-components</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Swagger-jsdoc</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>swr</p>
+            </td>
+            <td>
+                <p>MIT</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+</div>
+	<!-- end home intro -->
+
+	
+
+
+	<!-- footer bottom -->
+	<div class="container">
+        <div class="footer-bottom box-content section-bottom-only">
+            <span>Copyright © 2021-2022 CareQualityDashboard, UCL IXN Team 20. All Rights Reserved.</span>
+        </div>
+    </div>
+	<!-- end footer bottom -->
+
+	<!-- script -->
+	<script src="static/js/jquery-3.5.1.min.js"></script>
+	<script src="static/js/bootstrap.bundle.min.js"></script>
+	<script src="static/js/magnific-popup.min.js"></script>
+	<script src="static/js/fakeLoader.min.js"></script>
+	<script src="static/js/swiper-bundle.min.js"></script>
+	<script src="static/js/contact-form.js"></script>
+	<script src="static/js/jquery.nav.js"></script>
+	<script src="static/js/main.js"></script>
+	<!-- end script -->
+
+</body>
+</html>
