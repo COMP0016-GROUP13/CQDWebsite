@@ -736,9 +736,11 @@ to {opacity: 1}
 }
 /* round icon of member pictures*/
 .round_icon{
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     display: flex;
+    object-fit: cover; 
+    object-position: center;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
