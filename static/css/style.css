@@ -741,7 +741,7 @@ to {opacity: 1}
     display: flex;
     object-fit: cover; 
     object-position: center;
-    border-radius: 50%;
+
     align-items: center;
     justify-content: center;
     overflow: hidden;
