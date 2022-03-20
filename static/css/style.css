@@ -747,6 +747,20 @@ to {opacity: 1}
     overflow: hidden;
 }
 
+.slide_block{
+
+    width: 250px;
+    height: 380px;
+    display: flex;
+    object-fit: cover; 
+    object-position: center;
+
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
 .wrap{
     width: 900px;
     margin: 0 auto;
