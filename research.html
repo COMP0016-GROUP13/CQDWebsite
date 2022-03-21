@@ -86,9 +86,15 @@
 
         <div class="h4 col text-center" style="margin: 1em 0 1em 0;">
             Before proceeding with the project, we did some extensive research on the technical choices that we 
-            have to make in order to implement the dashboard. These include the programming language, frameworks,
-            authentication system and technology stacks. In short, the list below simplifies the key decisions that 
-            we have decided on for this project. We also included the related project that we have done research on.
+            have to make in order to implement the extended dashboard. These include the programming language, frameworks,
+            authentication system and technology stacks. From the previous iteration of this project, we had a 
+            web stack given to us to use. However this stack seemed quite 
+            “over-the-top” for our requirements and the middleware SSO, which is Keycloak, was completely new and had very little documentation
+            for us to adapt to. Our team only had one member familiar with web development 
+            and this was only in the front-end. Migrating the whole codebase to something such as Django, while easier
+            to use and understand, would take much more time than required, and while we were doing that, we would have adapted
+            to the new stack in the process. The following diagram simplifies the stack implemented for our dashboard along
+            with the related project that we researched on:
         </div>
 
         <div class="container">
@@ -96,9 +102,11 @@
                 <ul>
                     <p class="h5"><b class="h4" style="color:#00a2e8">RELATED PROJECT:</b> Group 20 Care Quality Dashboard (Version 1 - 2020/2021)</p>
                     <p class="h5"><b class="h4" style="color:#00a2e8">MAIN DEVELOPMENT LANGUAGE:</b> JavaScript</p>
-                    <p class="h5"><b class="h4" style="color:#00a2e8">WEB DEVELOPMENT FRAMEWORK:</b> Next.js</p>
-                    <p class="h5"><b class="h4" style="color:#00a2e8">WEBSITE FRONT-END COMPONENT SYSTEM:</b> React Suite</p>
-                    <p class="h5"><b class="h4" style="color:#00a2e8">LOGIN SYSTEM:</b> Keycloak</p>
+                    <p class="h5"><b class="h4" style="color:#00a2e8">WEB DEVELOPMENT FRAMEWORK (FRONT-END):</b> Next.js</p>
+                    <p class="h5"><b class="h4" style="color:#00a2e8">OBJECT-RELATIONAL MAPPING (BACK-END):</b> Prisma</p>
+                    <p class="h5"><b class="h4" style="color:#00a2e8">DATABASE MANAGEMENT SYSTEM:</b> PostgreSQL</p>
+                    <p class="h5"><b class="h4" style="color:#00a2e8">DATA VISUALISATION LIBRARY:</b> Chart.js</p>
+                    <p class="h5"><b class="h4" style="color:#00a2e8">LOGIN SYSTEM (MIDDLEWARE):</b> Keycloak</p>
                 </ul>
             </div>
         </div>
@@ -208,6 +216,31 @@
                     </li><br>
                 </div>
             </div>
+
+            <div class="container">
+                <div class="h2 col text-center" style="color:#00a2e8; border-style: dashed;">
+                    VISUALISATION TECHNOLOGIES
+                </div>
+    
+                <div class="h4 col text-center" style="margin: 1em 0 2em 0;">
+                    Visualising the statistics gathered after self-evaluations of a report is essential to provide the clinicians with the 
+                    idea of how they are progressing in terms of care quality. Also, visualisation helps senior staff to supervise fellow
+                    clinicians. The previous implementation of the Care Quality Dashboard used Chart.js for visualisations, but we 
+                    decided to look into other graphing libraries for considering other alternatives. We then found the JavaScript library, D3.js,
+                    which is mainly used to create interactive data visualisations.  The table below shows a summary of the comparisons made
+                    between the previous library used and D3.js <span style="color: #e84d00;"> [14]</span>:
+    
+                    <div class="container" style="padding: 0 0 1em 0;">
+                        <img src="static/image/research/visualisation.png" style="width:70%; margin: 2.5% 0 0 0;" class="img-thumbnail">
+                    </div>
+
+                    From our research, we decided to continue using the Chart.js library. This is because Chart.js is beginner-friendly which makes it 
+                    a great fit considering the team's background in web development. Also our system does not require a complex graphical 
+                    visualisation, but instead we just need to display a line graph. Therefore, using the Chart.js Line component will aid us in creating 
+                    the visualisation effectively and quickly without causing unnecessary complications.<br><br>
+
+                </div>
+            </div>
         </div>
 
         <div class="container">
@@ -217,22 +250,28 @@
 
             <div class="h4 col text-center" style="margin: 1em 0 2em 0;">
                 To ensure that users can authenticate themselves in order to use the dashboard, it is incredibly important to have a secure way of logging in users into the system. It
-                is also important to find a system, which is easily understood by users as we do not want to over-complicate them. Therefore, we considered two different login systems:
-                Keycloak and NHS Identity. <br><br>
+                is also important to find a system, which is easily understood by users as we do not want to over-complicate them. Therefore, we considered three different login systems:
+                Keycloak, Microsoft Azure Single Sign On (SSO) and NHS Identity. <br><br>
 
                 At first we are very inclined towards NHS Identity because it should be intuitive to use by NHS users as the system has already been implemented within the organisation.
-                NHS Identity is actually the current technology for healthcare personnels to authenticate themselves for accessing England's clinical information systems<span style="color: #e84d00;"> [14]</span>.
+                NHS Identity is actually the current technology for healthcare personnels to authenticate themselves for accessing England's clinical information systems<span style="color: #e84d00;"> [15]</span>.
                 However, after doing some research, we found out that this system may not be able to be used for our platform due to several reasons. Firstly, NHS Identity is mostly 
                 in use in England for NHS England. Therefore, it is quite hard for our dashboard to be used by NHS Wales if we choose to utilise this login system because most clinicians in 
                 Wales cannot even access it. Secondly, only staff with a smart card can authenticate themselves using the NHS Identity. In fact, not all NHS staff have the card mentioned above, hence, 
                 this method may not be viable for our self-evaluating platform. <br><br>
 
+                Another option we have in hand is Microsoft Azure Single Sign On (SSO) system for authentication of users. Using this method, the login process would have been offloaded to Microsoft 
+                and would have saved development time. However, we do have a lot of different roles to be created and assigned to different NHS staff. By using the SSO, we would have to 
+                manually assign roles to users and this can be a huge inconvenience for our team.<br><br>
+
                 Keycloak is another option that we have at hand. According to its documentation, Keycloak is an identity and access management solution (IAM) which has been used by various 
-                applications for authentication purposes and it was developped by RedHat, the largest open-source software manufacturer<span style="color: #e84d00;"> [15]</span>. 
+                applications for authentication purposes and it was developped by RedHat, the largest open-source software manufacturer<span style="color: #e84d00;"> [16]</span>. 
                 It is a secure authentication system with multiple useful features, which will be a good fit to be integrated into 
-                our dashboard<span style="color: #e84d00;"> [16]</span>. Some of the features include high-performnance due its lightweight nature, Single Sign-On (SSO) for multiple applications and centralised management for 
-                users and administrations. Below is the simplification of all the features, taken from its official website,
-                that shows how Keycloak would make a good candidate for us to manage our login system<span style="color: #e84d00;"> [17]</span>.
+                our dashboard<span style="color: #e84d00;"> [17]</span>. Some of the features include high-performance due its lightweight nature, Single Sign-On (SSO) for multiple applications and centralised management for 
+                users and administrations. In comparison with the Microsoft Azure Single Sign On (SSO), Keycloak has an in-built feature to help assign roles to users of the system, 
+                which is a huge advantage for us.
+                Below is the simplification of all the features, taken from its official website,
+                that shows how Keycloak would make a good candidate for us to manage our login system<span style="color: #e84d00;"> [18]</span>.
                 
                 <div class="container">
                     <img src="static/image/research/keycloak-benefits.png" style="width:100%; margin: 2.5% 0 0 0;" class="img-thumbnail">
@@ -242,24 +281,29 @@
         </div>
     </div>
 
+    
+
+
+
     <div class="container" style="padding: 0 0 5% 0;">
         <div class="h1 col text-center" style="color:#00a2e8;">
             SUMMARY
         </div>
 
         <div class="h3 col text-center">
+            For a look at our simplified system architecture diagram, <a href="systemdesign.html" style="color: #00a2e8">click here</a>. 
             As a conclusion, we would like to reiterate our main technical choices for this project:
         </div>
 
 
-        <div class="h4 col text-center" style="margin: 1em 0 2em 0;">
+        <div class="h4 col " style="margin: 1em 0 2em 10em;">
             1) JavaScript would be our primary programming language<br>
-            2) The JavaScript library that we chose is React along with its framework Next.js<br>
-            3) Our system's login will be handled by Keycloak
+            2) Our back-end will be built using Prisma as an ORM<br>
+            3) Next.js will be our front-end framework<br>
+            4) Our system's login will be handled by Keycloak<br>
+            5) PostgreSQL will manage our dashboard database
             
         </div>
-
-
     </div>
 
 
@@ -282,11 +326,12 @@
             <span style="color: #e84d00;">[10] </span>Nextjs.org. n.d. Next.js by Vercel - The React Framework. [online] Available at: <a href=https://nextjs.org style="color: #00a2e8">https://nextjs.org</a> [Accessed 2 November 2021].<br>
             <span style="color: #e84d00;">[11] </span>freeCodeCamp.org. 2020. Why You Should Learn Next.js as a React Developer. [online] Available at: <a href="https://www.freecodecamp.org/news/why-you-should-learn-next-js-as-a-react-developer/" style="color: #00a2e8">https://www.freecodecamp.org/news/why-you-should-learn-next-js-as-a-react-developer/</a> [Accessed 14 November 2021].<br>
             <span style="color: #e84d00;">[12] </span>Educative: Interactive Courses for Software Developers. n.d. What is code splitting in Next.js?. [online] Available at: <a href=https://www.educative.io/edpresso/what-is-code-splitting-in-nextjs style="color: #00a2e8">https://www.educative.io/edpresso/what-is-code-splitting-in-nextjs</a> [Accessed 18 November 2021].<br>
-            <span style="color: #e84d00;">[13] </span>Nextjs.org. n.d. Advanced Features: Automatic Static Optimization | Next.js. [online] Available at: <a href=https://nextjs.org/docs/advanced-features/automatic-static-optimization style="color: #00a2e8">https://nextjs.org/docs/advanced-features/automatic-static-optimization</a> [Accessed 5 November 2021].<br>
-            <span style="color: #e84d00;">[14] </span>NHS Digital. n.d. NHS Care Identity Service 2. [online] Available at: <a href=https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2 style="color: #00a2e8">https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2</a> [Accessed 20 November 2021].<br>
-            <span style="color: #e84d00;">[15] </span>Aoe.com. n.d. Keycloak: Secure & easy Identity & Access Management. [online] Available at: <a href=https://www.aoe.com/en/expertise/keycloak.html style="color: #00a2e8">https://www.aoe.com/en/expertise/keycloak.html</a> [Accessed 25 November 2021].<br>
-            <span style="color: #e84d00;">[16] </span>AG, I., n.d. Keycloak Benefits. [online] Keycloak.ch. Available at: <a href=https://keycloak.ch/keycloak-benefits style="color: #00a2e8">https://keycloak.ch/keycloak-benefits</a> [Accessed 30 November 2021].<br>
-            <span style="color: #e84d00;">[17] </span>Team, K., n.d. Keycloak. [online] Keycloak.org. Available at: <a href=https://www.keycloak.org style="color: #00a2e8">https://www.keycloak.org</a> [Accessed 30 November 2021].<br>
+            <span style="color: #e84d00;">[13] </span>Cook, P., 2019. D3 or Chart.js for Data Visualisation?. [online] Createwithdata.com. Available at: <a href=https://www.createwithdata.com/d3js-or-chartjs style="color: #00a2e8">https://www.createwithdata.com/d3js-or-chartjs</a>[Accessed 6 December 2021].<br>
+            <span style="color: #e84d00;">[14] </span>Nextjs.org. n.d. Advanced Features: Automatic Static Optimization | Next.js. [online] Available at: <a href=https://nextjs.org/docs/advanced-features/automatic-static-optimization style="color: #00a2e8">https://nextjs.org/docs/advanced-features/automatic-static-optimization</a> [Accessed 5 November 2021].<br>
+            <span style="color: #e84d00;">[15] </span>NHS Digital. n.d. NHS Care Identity Service 2. [online] Available at: <a href=https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2 style="color: #00a2e8">https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2</a> [Accessed 20 November 2021].<br>
+            <span style="color: #e84d00;">[16] </span>Aoe.com. n.d. Keycloak: Secure & easy Identity & Access Management. [online] Available at: <a href=https://www.aoe.com/en/expertise/keycloak.html style="color: #00a2e8">https://www.aoe.com/en/expertise/keycloak.html</a> [Accessed 25 November 2021].<br>
+            <span style="color: #e84d00;">[17] </span>AG, I., n.d. Keycloak Benefits. [online] Keycloak.ch. Available at: <a href=https://keycloak.ch/keycloak-benefits style="color: #00a2e8">https://keycloak.ch/keycloak-benefits</a> [Accessed 30 November 2021].<br>
+            <span style="color: #e84d00;">[18] </span>Team, K., n.d. Keycloak. [online] Keycloak.org. Available at: <a href=https://www.keycloak.org style="color: #00a2e8">https://www.keycloak.org</a> [Accessed 30 November 2021].<br>
         </div>
 
 
