@@ -83,18 +83,61 @@
         <div class="h1 col text-center" style="color:#00a2e8;">
             Testing
         </div>
+        <br>
+        <br>
+        <br>
+        <!-- frontend -->
+        <h2 style="color:#00a2e8; text-align: center;">
+            Front-end
+        </h2>
+        <br>
+        <div class="h4 text-center" style="padding-bottom: 1.5em;">
+            After doing some research on how to test React/Next.js projects we learnt that a common method is using Enzyme and Jest.
+
+            Enzyme allows us to manipulate/use components in our test suite using methods such as mount (to simulate a component for testing purposes) and simulate (to simulate interactions with components like clicks).
+            
+            Jest on the other hand is an assertion library and test runner. It is an open source JavaScript testing framework which is very well documented and has a wide range of APIs which gives us great flexibility to test in a variety of different ways. Another advantage of Jest is that tests are isolated and can be parallelized which allowed us to create a huge test suite that can be run in seconds.
+            
+            Overall we created…
+        </div>
+        <!-- end fronend -->
+        <!-- Backend -->
+        <h2 style="color:#00a2e8; text-align: center;">
+            Back-end
+        </h2>
+        <br>
+        <div class="h4 text-center" style="padding-bottom: 1.5em;">
+            Continuing the previous year, we decided not to unit test the API, because of the complications that arise when isolating the logic of the APIs from the network handling and database interactions. Therefore we will again be performing integration testing on our REST API to test the Next.js route handling through to the database interactions.
+
+            We discovered a node package, openapi-response that links with jest-openapi to assert HTTP responses to match our OpenAPI specification. One major benefit being that we can use our OpenAPI specification in part for testing too, so we don’t have to write code again to check for response structure when we already have it in our OpenAPI specification.
+            
+            One major problem with the backend testing is that every action creates unnecessary data that could affect other actions further down the line. We want to isolate not units but whole systems/networks to retrieve correct data from the database. This is why we implement a script (api-test.environment.js) that cleans and add certain seed data for us to use in each test. The script is ran before every test for the system to use and utilises Jest Test Enviroments for the teardowns.
+            
+            Overall our back-end struggled with responses and words due to different implementations of the scores and dashboards. But we ended up….
+        </div>
+        <!-- end backend -->
+
+        <h2 style="color:#00a2e8; text-align: center;">
+            End-To-End
+        </h2>
+        <br>
+        <div class="h4 text-center" style="padding-bottom: 1.5em;">
+            These aim to test the entire system as a whole from a user’s perspective, by programmatically navigating to the site, interacting with it, and asserting that the UI is updated and functions correctly at all times.
+
+            We are using Puppeteer, a popular Node.js API to programmatically control Chrome, alongside Jest for these tests. However Puppeteer does not come with all good things; we found that it is incompatible with our own global variables that refer to the page and the browser, thus we were limited to what the library gave us. Sometimes we found that the browser enviroment was not the same on all the machines and we had errors of “this.global.page.close” cannot be called as it is undefined in the environment. However on some machines this would work perfectly. Overall we tried to create a codebase that worked on all machines.
+            
+            After setting up the e2e framework we began on writing the tests. We focused on covering all functionality of our platform to ensure we were confident that there are no bugs and that our platform is fully functional. We did this by step-by-step going through each use case of our platform and noting what actions these require on our platform. We also focused on testing the security of our platform so tested whether users with limited permissions could access parts of our platform that require more permissions.
+            
+            With a total of 13 tests, we were able to pass all of them on both Firefox and Chrome complying with compatibility testing:
+        </div>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-bottom img-thumbnail" src="./static/image/testing/sitetest.jpg" style="padding: 0%;">
+            </div>
+        </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-    <!-- contents -->
+    <!-- end contents -->
 
 	<!-- footer bottom -->
 	<div class="container">
