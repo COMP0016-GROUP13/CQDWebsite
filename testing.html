@@ -102,9 +102,17 @@
             Another advantage of Jest is that tests are isolated and 
             can be parallelized which allowed us to create a huge test suite that can be run in seconds.
             
-            Overall we created…
+            For testing our front-end, we had created 22 test suites with 71 tests in total. After running them, we managed to pass 
+            all 71 tests as seen in the diagram below:<br><br>
+
+            <div class="container">
+                <div class="row">
+                    <img class="mx-auto img-thumbnail" src="static/image/testing/frontend-test.png" style="max-width: 50%;">
+                </div>
+            </div>
         </div>
-        <!-- end fronend -->
+        <!-- end front-end -->
+
         <!-- Backend -->
         <h2 style="color:#00a2e8; text-align: center;">
             BACK-END TESTING
@@ -122,12 +130,20 @@
             One major problem with the backend testing is that every action creates unnecessary data that could affect other 
             actions further down the line. We want to isolate not units but whole systems/networks to retrieve correct data 
             from the database. This is why we implement a script (<code>api-test.environment.js</code>) that cleans and add certain seed 
-            data for us to use in each test. The script is ran before every test for the system to use and utilises <a href="https://jestjs.io/docs/configuration#testenvironment-string" style="color: #1CBBFF">Jest Test Environments</a>
+            data for us to use in each test. The script is ran before every test for the system to use and utilises 
+            <code>Jest Test Environments</code>
             for the teardowns.
             
             Overall our back-end struggled with responses and words due to different implementations of the scores and dashboards. 
-            But we ended up….
+            However, our dashboard still passed all 190 tests from our 13 test suites. The results are illustrated in the following diagram: <br><br>
+
+            <div class="container">
+                <div class="row">
+                    <img class="mx-auto img-thumbnail" src="static/image/testing/backend-test.png" style="max-width: 60%;">
+                </div>
+            </div>
         </div>
+
         <!-- end backend -->
 
         <h2 style="color:#00a2e8; text-align: center;">
@@ -155,11 +171,11 @@
             as seen in the diagram below:
 
         </div>
+
         <div class="container">
             <div class="row">
                 <img class="mx-auto img-thumbnail" src="static/image/testing/sitetest.png" style="max-width: 70%;">
             </div>
-            
         </div>
 </div>
 
