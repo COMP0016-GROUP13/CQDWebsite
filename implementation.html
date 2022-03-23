@@ -81,89 +81,139 @@
     <!-- end navbar -->
 
     <!-- contents -->
-    <div class="container" style="padding: 0 0 5% 0;">
+    <div class="container">
         <div class="h1 col text-center" style="color:#00a2e8;">
             IMPLEMENTATION
         </div>
     </div>
 
-
-    <div class="container">
-        <h2 style="color:#00a2e8;">
-            Authentication
+    <div class="container" style="padding: 0 0 3% 0;">
+        <h2 class="text-center" style="color:#00a2e8; text-decoration: underline;">
+            AUTHENTICATION
         </h2>
+
         <br>
-        <div class="h3 text-center" style="padding-bottom: 1.5em;">Login</div>
-        <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            All authentication methods (login / register) are handled by Keycloak. Currently, our Keycloak database runs within a dockerised container on our linode server. Using a custom realm file, we were able to instantiate roles for each specific type of user
+
+        <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
+            PROCESS 1: Login Process
+        </div>
+
+        <div class="h4 text-center" style="padding-bottom: 1em;">
+            All authentication methods (login and registration) are handled by Keycloak. Currently, our Keycloak database runs within a dockerised container on our linode server. Using a custom realm file, we were able to instantiate roles for each specific type of user
             on our system. When a user tries to securely login into our system with the keycloak portal, the authentication process is offloaded to Keycloak to check that the username and password is held within the keycloak database. However, by using
             Prisma an ORM we can synchronize the data from the “Users” table from the keycloak database to our PostgreSQL database, which is hosted within a separate dockerised container.
         </div>
 
         <br>
-        <br>
-        <div class="h3 text-center" style="padding-bottom: 1.5em;">Register</div>
 
-        <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            From our Use-case diagram we wanted platform administrators to be able to add new hospital/health board users through our web-interface(front-end) rather than Keycloak. Therefore, the most common method of registering users was to allow them to join by
-            URL. Once a user has been added, the keycloak server is automatically updated, with the user’s credentials.
+        <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
+            PROCESS 2: Registration 
         </div>
 
-        <br>
-        <br>
+        <div class="h4 text-center" style="padding-bottom: 1em;">
+            From our Use-case diagram we wanted platform administrators to be able to add new hospital/health board users through our web-interface(front-end) rather than Keycloak. Therefore, the most common method of registering users was to allow them to join by
+            URL. Once a user has been added, the keycloak server is automatically updated, with the user's credentials.
+        </div>
 
-        <h2 style="color:#00a2e8;">
-            Visualisations
+    </div>
+
+    <div class="container" style="padding: 0 0 3% 0;">
+        <h2 style="color:#00a2e8; text-decoration: underline;" class="text-center">
+            VISUALISATIONS
         </h2>
         <br>
-        <div class="h3 text-center" style="padding-bottom: 1.5em;">Line Chart</div>
-        <div class="h4 text-center" style="padding-bottom: 1.5em;">
 
+        <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
+            METHOD 1: Line Charts
+        </div>
+
+        <div class="h4 text-center" style="padding-bottom: 1em;">
             For a given dashboard most users can navigate to the statistics page where they can view a graph of their overall progress.
-            <br> The score for each standard is stored from a number between 0 to 4. Therefore, the best way to represent this data is to convert each score to a percentage.
-            <br>As a result, we can plot the Score (as a percentage) on the Y axis and the Time (in Days) on the X axis.
+            The score for each standard is stored from a number between 0 to 4. Therefore, the best way to represent this data is to convert each score to a percentage.
+            As a result, we can plot the Score (as a percentage) on the Y-axis and the Time (in Days) on the X-axis.
             <br>
             <br>
-            <img src="./static/picture/graph.png" width="90%" alt="main line chart">
+
+            <img src="./static/picture/graph.png" width="80%" alt="main line chart" class="img-thumbnail">
+
             <br>
-            <br> The system makes use of the “Line” component from the ‘react-chartjs-2’ library which is a react wrapper for the Chart.js library. Since Chart.js is a client-side JavaScript library we are required to have a specific format to render
-            the graph. Therefore, we created another react component called “LineChart” to format the data from our API call to our PostgreSQL to correctly feed it into the Chart.js Line component.
+            <br> 
+            
+            The system makes use of the <code>Line</code> component from the <code>react-chartjs-2</code> library which is a react wrapper for the Chart.js library. Since Chart.js is a client-side JavaScript library we are required to have a specific format to render
+            the graph. Therefore, we created another react component called <code>LineChart</code> to format the data from our API call to our PostgreSQL to correctly feed it into the Chart.js Line component.
+
             <br>
             <br>
-            <div class="h3 text-center" style="padding-bottom: 1.5em;">Quick Summary</div>
+            <br>
+
+            <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
+                METHOD 2: Quick Data Summarisations
+            </div>
+
             Quick Summary section of the statistics page shows a mean of all self-assessments taken for the given dashboard. The section comprises of a Circle Accordion which makes use of the built in circle component from react-suite. The calculation for the average
             statistic for each health and safety standard is handled on the backend.
-            <img src="./static/picture/quick_summary.png" width="90%" alt="quick summary">
-        </div>
 
-        <h2 style="color:#00a2e8;">
-            Manage Pages
+            <br>
+            <br>
+
+            <img src="./static/picture/quick_summary.png" width="90%" alt="quick summary" class="img-thumbnail">
+
+            <br>
+            <br>
+        </div>
+    </div>    
+
+
+    <div class="container">
+        <h2 style="color:#00a2e8; text-decoration: underline;" class="text-center">
+            PAGE MANAGEMENT
         </h2>
+
         <br>
-        <div class="h3 text-center" style="padding-bottom: 1.5em;">Join Codes </div>
-        <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            When head of hosplital and head of departments are logged into the system they can create unique urls for users to join their hospital and department respectively. There are two different pages created the implementation of this:
 
+        <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
+            Join Codes 
+        </div>
 
+        <div class="h4 text-center" style="padding-bottom: 1em;">
+            When head of hosplital and head of departments are logged into the system they can create 
+            unique urls for users to join their hospital and department respectively. There are two 
+            different pages created the implementation of this:
         </div>
 
         <br>
-        <div class="h3 text-center" style="padding-bottom: 1.5em;">Mange Questions and Urls</div>
-        <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            Head of departments have access to a page where they can manage questions within a dashboard and edit their urls:
-            <img src="./static/image/implementation/EditQuestions.png" width="90%" alt="quick summary">
+
+        <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
+            Manage Questions and URLs
+        </div>
+
+        <div class="h4 text-center" style="padding-bottom: 1em;">
+            Head of departments have access to a page where they can manage questions within a dashboard and edit their URLs:
+
             <br>
             <br>
-            <img src="./static/image/implementation/EditUrls.png" width="90%" alt="quick summary">
+
+            <img src="./static/image/implementation/EditQuestions.png" width="90%" alt="quick summary" class="img-thumbnail">
+
             <br>
             <br>
+
+            <img src="./static/image/implementation/EditUrls.png" width="90%" alt="quick summary" class="img-thumbnail">
+
+            <br>
+            <br>
+
             Both these pages use PUT requests to their repective API's (api/questions and api/questionURLs) and because they are both different tables this is done quite easily. The query system again shows its utility here as we can pass the dashboard_id in as a parameter to the API in order to recieve the currect
             set of questions linked to the dashboard. Furthermore the table component itself performs it's own API calls. Each row is linked to a key which is standard practice for Next.js. The key in our system is also the question id which we can use to make a PUT or DELETE request to the api/question[id] endpoint.
             This efficient system make the codebase much cleaner and understandable.
         </div>
 
+
+
+
         <br>
-        <div class="h3 text-center" style="padding-bottom: 1.5em;">Login</div>
+        <div class="h3 text-center" style="padding-bottom: 1em;">
+            Login</div>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
             All authentication methods (login / register) are handled by Keycloak. Currently, our Keycloak database runs within a dockerised container on our linode server. Using a custom realm file, we were able to instantiate roles for each specific type of user
             on our system. When a user tries to securely login into our system with the keycloak portal, the authentication process is offloaded to Keycloak to check that the username and password is held within the keycloak database. However, by using
@@ -176,6 +226,8 @@
         <h2 style="color:#00a2e8;">
             Administrator Pages
         </h2>
+
+
         <br>
         <div class="h3 text-center" style="padding-bottom: 1.5em;">Line Chart</div>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
@@ -196,8 +248,8 @@
             statistic for each health and safety standard is handled on the backend.
             <img src="./static/picture/quick_summary.png" width="90%" alt="quick summary">
         </div>
-
     </div>
+   
 
 
 
