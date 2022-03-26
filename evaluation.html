@@ -87,6 +87,8 @@
         </div><br>
 
         <div>
+            <h5 class="h5 text-center" style="color: black;">Functional Requirements</h5>
+
             <table class="table table-hover table-bordered text-center">
                 <thead>
                     <tr>
@@ -171,47 +173,79 @@
                     <tr>
                         <th scope="row">11</th>
                         <td>Test front-end, backend and end-to-end(e2e)</td>
-                        <td>Must</td>
+                        <td>Should</td>
                         <td>✔</td>
                         <td>Sarvesh , Nathan</td>
                     </tr>
                     <tr>
                         <th scope="row">12</th>
+                        <td>Include non health and safety standards</td>
+                        <td>Won't</td>
+                        <td>✔</td>
+                        <td>Sarvesh , Nathan</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13</th>
+                        <td>Non Likert-Scale questions for the self-report</td>
+                        <td>Won't</td>
+                        <td>✔</td>
+                        <td>Sarvesh , Nathan</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+            <br>
+
+            <h5 class="h5 text-center" style="color: black;">Non-Functional Requirements</h5>
+            <table class="table table-hover table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th scope="col" style="width: 1%">Number</th>
+                        <th scope="col" style="width: 50%">Description</th>
+                        <th scope="col" style="width: 5%">Priority</th>
+                        <th scope="col" style="width: 5%">Status</th>
+                        <th scope="col" style="width: 20%">Contributor(s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">14</th>
                         <td>New Entity Relation Diagram</td>
-                        <td>Should</td>
+                        <td>Must</td>
                         <td>✔</td>
                         <td>Sarvesh</td>
                     </tr>
                     <tr>
-                        <th scope="row">13</th>
-                        <td>Include deployment Documentation</td>
-                        <td>Should</td>
-                        <td>✔</td>
-                        <td>Sarvesh , Nathan</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">14</th>
-                        <td>The System must have a user manual to help assist navigation of the website</td>
-                        <td>Should</td>
-                        <td>✔</td>
-                        <td>Sarvesh , Nathan</td>
-                    </tr>
-                    <tr>
                         <th scope="row">15</th>
-                        <td>Re-new prisma schema for more than one dashboard rather than just care quality alone</td>
-                        <td>Should</td>
+                        <td>Include deployment Documentation</td>
+                        <td>Must</td>
                         <td>✔</td>
                         <td>Sarvesh , Nathan</td>
                     </tr>
                     <tr>
                         <th scope="row">16</th>
+                        <td>The System must have a user manual to help assist navigation of the website</td>
+                        <td>Must</td>
+                        <td>✔</td>
+                        <td>Sarvesh , Nathan</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">17</th>
+                        <td>Re-new prisma schema for more than one dashboard rather than just care quality alone</td>
+                        <td>Must</td>
+                        <td>✔</td>
+                        <td>Sarvesh , Nathan</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">18</th>
                         <td>Include a simple User interface</td>
                         <td>Should</td>
                         <td>✔</td>
                         <td>Sarvesh , Nathan</td>
                     </tr>
                     <tr>
-                        <th scope="row">17</th>
+                        <th scope="row">19</th>
                         <td>Secure Platform to Avoid Data Breach</td>
                         <td>Should</td>
                         <td>✔</td>
@@ -244,7 +278,7 @@
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>Signing out and trying to log into the system again using a different account, quickly will automatically sign the previous user back into the system. This bug is caused by keycloak and not our own implementation</td>
+                        <td>Signing out and trying to log into the system again using a different account, quickly will automatically sign the previous user back into the system.(This bug is caused by keycloak)</td>
                         <td>Low</td>
                     </tr>
                 </tbody>
@@ -396,21 +430,33 @@
 
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active h4" id="pills-1" style="background-color: white; padding: 0.5em;">
-                    Since we met with our client on a weekly basis, we were able to greatly and incrementally re-structure the previous front-end of the website to adjust for more than one dashboard, so that it was intuitive to use. We also included better media queries
+                    Since we met with our client on a weekly basis, we were able to greatly and incrementally re-structure the previous front-end of the website to adjust for the multidashboard feature, so that it was intuitive to use. We also included better media queries
                     to support more mobile devices of different screen sizes. One area we would like to improve is that, for some visualisations such as tables with many coloumns, the mobile devices would need to rotate their screens to see the full chart,
                     therefore if there was a way to indicate to the user to rotate the screen would improve the overall user experience
 
                     <br>
-                    <br>
+                    <br> Overall, we focused usability while maintaining design principles such as visibility, consistency, and mapping throughout the development of the web application.
 
                 </div>
 
                 <div class="tab-pane fade h4" id="pills-2" style="background-color: white; padding: 0.5em;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mauris nunc, lacinia sed dolor sit.
+                    All requirements of our system have been met, and clinicians can begin using the system. Our application is scalable which means that platform adminsitrators can easily add new health boards and hospitals into the sytem, from which Hospitals can create
+                    new departments and departments can add new clincians.
+                    <br>
+                    <br> All dependencies used in our web application are popular and open-source. Our authentication and role-assignment processes are offloaded to Keycloak, which is also open-source, making it highly improbable to have security vulnerabilities.
                 </div>
 
                 <div class="tab-pane fade h4" id="pills-3" style="background-color: white; padding: 0.5em;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mauris nunc, lacinia sed dolor sit.
+                    Overall, our application is stable and is able to run smoothly on all devices. The tests written to render individual front-end components help to support the stability of the application.
+                    <br>
+                    <br> The application is currently running on a Linode server with only 1 Core and 1GB of RAM. Therefore, it is limited in terms of handling a high number of requests to the server. In the future, upgrading the current server to a new
+                    one with more processing power and storage space will be a priority.
+                    <br>
+                    <br> Other factors that can rarely affect stability include:
+                    <ul>
+                        <li>poor internet connection</li>
+                        <li>poor system hardware</li>
+                    </ul>
                 </div>
 
                 <div class="tab-pane fade h4" id="pills-4" style="background-color: white; padding: 0.5em;">
@@ -418,15 +464,33 @@
                 </div>
 
                 <div class="tab-pane fade h4" id="pills-5" style="background-color: white; padding: 0.5em;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mauris nunc, lacinia sed dolor sit.
+                    Our project aimed to be accessible by all clincians via most web browsers. Currently, our end-to-end tests use the puppeteer api to instantiate visual tests of the firefox and google chrome browsers. From our tests, we can conclude that our project is
+                    compatible with chromium web browsers. For future development, we could conduct the same tests for other web browsers(such as Safari)to ensure full functionality accross all web browsers.
                 </div>
 
                 <div class="tab-pane fade h4" id="pills-6" style="background-color: white; padding: 0.5em;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mauris nunc, lacinia sed dolor sit.
+                    Going into the project, we knew that the level of code quality had to be maintained and improved where necessary. We wanted to prevent any confusion for future developers who undertake the next iteration of the project.
+                    <br>
+                    <br> <b> Technologies used to help maintain code quality: </b>
+                    <br> Prettier - To ensure code formatting was kept consistent accross javasctipt, html and css files in the project
+                    <br>
+                    <br> SonarLint - To detect and fix general quality issues, such as unused variables and functions, missing semicolons, etc.
+                    <br>
+                    <br> Along with our code quality tools, we further extended our documentation on our github repository in the form of README files, which highlight the architecture, deployment and getting started for the next developers who take on
+                    the project.
+                    <br>
+                    <br> During development major changes were made to the backend, therefore using swagger and the OpenAPI specification we could document the REST API including the responses and parameters. It is currently hosted using github pages
+                    and can be found <a href="https://comp0016-group13.github.io/CareQualityDashboard/">here</a>
                 </div>
 
                 <div class="tab-pane fade h4" id="pills-7" style="background-color: white; padding: 0.5em;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mauris nunc, lacinia sed dolor sit.
+                    We primarily used trello to communicate with our client about general updates and and to keep track of our progress in stages. It also helped us monitor completed tasks from each member during the development of the project.
+                    <br>
+                    <br> The team created our telegram group chat for effective daily communications
+                    <br>
+                    <br> For immediate responses to our client we used a whatsapp group chat.
+                    <br>
+                    <br> The team would meet via zoom to discuss about deliverables needed for the module, conduct pair programming and talk about future steps we would take in order to achieve our goals.
                 </div>
             </div>
         </div>
@@ -441,8 +505,6 @@
             <ol>
                 <li class="h4">Include expiry date for clinician join codes </li>
                 <li class="h4">Include a way to differentiate dashboards created by departments and adminsitrators</li>
-                <li class="h4">heyya</li>
-                <li class="h4">heyya</li>
             </ol>
         </div>
     </div>
