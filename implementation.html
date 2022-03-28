@@ -137,7 +137,10 @@
 
             <br>
             <br> The system makes use of the <code>Line</code> component from the <code>react-chartjs-2</code> library which is a react wrapper for the Chart.js library. Since Chart.js is a client-side JavaScript library we are required to have a specific
-            format to render the graph. Therefore, we created another react component called <code>LineChart</code> to format the data from our API call to our PostgreSQL to correctly feed it into the Chart.js Line component.
+            format to render the graph. Therefore, we created another react component called <code>LineChart</code> to format the data from our API call to our PostgreSQL to correctly feed it into the Chart.js <code>Line</code> component.
+            <br>
+            <br> Following the Chart.js documentation, we can can utilise the legend selection to filter the line chart when the graph may be too complicated to analyse invidual health and care standards.
+
 
             <br>
             <br>
@@ -148,8 +151,8 @@
             <br>
             <img src="./static/picture/quick_summary.png" width="90%" alt="quick summary" class="img-thumbnail">
             <br>
-            <br> Quick Summary section of the statistics page shows a mean of all self-assessments taken for the given dashboard. The section comprises of a Circle Accordion which makes use of the built-in circle component from react-suite. The process
-            of calculating the average statistic for each health and safety standard is handled on the backend.
+            <br> Quick Summary section of the statistics page shows a mean of all self-assessments taken for the given dashboard. The section comprises of a <code> Circle Accordion</code> which makes use of the built-in <code> Circle </code> component
+            from react-suite. The process of calculating the average statistic for each health and safety standard is handled on the backend.
             <br>
             <br>
 
@@ -197,8 +200,8 @@
             For a given dashboard most users can navigate to the statistics page where they can view a graph of their overall progress.
             <br> As each score is stored from 0 to 4. To represent the score as a percentage, we do a simple calculation:
             <br> Percentage = (score / 4) * 100
-            <br>As a result, we can plot the Score as a percentage on the Y axis and the Time in Days on the X axis.  
-            </div>
+            <br>As a result, we can plot the Score as a percentage on the Y axis and the Time in Days on the X axis.
+        </div>
     </div>
 
 
@@ -206,16 +209,6 @@
         <h2 style="color:#00a2e8; border-style: double;" class="text-center">
             PAGE MANAGEMENT
         </h2>
-
-        <br>
-
-        <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
-            Join Codes
-        </div>
-
-        <div class="h4 text-center" style="padding-bottom: 1em;">
-            When head of hosplital and head of departments are logged into the system they can create unique urls for users to join their hospital and department respectively. There are two different pages created the implementation of this:
-        </div>
 
         <br>
 
@@ -263,8 +256,9 @@
             all sub-pages. i.e the self reporting page and statistics page. This way we can pass this ID into the other API calls to fetch the correct questions for the correct dashboard
             <br>
             <br>
-            The view page also comes with the search filter. Of course as the website scales, the number of dashboard may increase to a level where many pages are required. Our team has implented this feautre to make user expiienve much easier, espically for admins as they are able to see all 
-            the dashboards for all the departments and hospitals. The search components makes use of the event loop applying a filter to the API response whenever the input field is edited; adding or removing buttons visible to the user.
+            <br> The view page also comes with the search filter. Of course as the website scales, the number of dashboard may increase to a level where many pages are required. Our team has implented this feautre to make user expiienve much easier, espically
+            for admins as they are able to see all the dashboards for all the departments and hospitals. The search components makes use of the event loop applying a filter to the API response whenever the input field is edited; adding or removing buttons
+            visible to the user.
         </div>
 
         <br>
@@ -274,13 +268,13 @@
             <h2 style="color:#00a2e8; border-style: double;" class="text-center">
                 Admin Pages
             </h2>
-    
+
             <br>
-    
+
             <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
                 Admin Manage Page
             </div>
-    
+
             <div class="h4 text-center" style="padding-bottom: 1em;">
                 Eventhough User Management comes in built within the Keycloak admin console we have expanded on the an admin page where they are able to create health boards, hospitals and other admins
                 <br>
@@ -364,26 +358,26 @@
 
 
 
-    <!-- end contents -->
+        <!-- end contents -->
 
-    <!-- footer bottom -->
-    <div class="container">
-        <div class="footer-bottom box-content section-bottom-only">
-            <span>Copyright © 2021-2022 CareQualityDashboard, UCL IXN Team 13. All Rights Reserved.</span>
+        <!-- footer bottom -->
+        <div class="container">
+            <div class="footer-bottom box-content section-bottom-only">
+                <span>Copyright © 2021-2022 CareQualityDashboard, UCL IXN Team 13. All Rights Reserved.</span>
+            </div>
         </div>
-    </div>
-    <!-- end footer bottom -->
+        <!-- end footer bottom -->
 
-    <!-- script -->
-    <script src="static/js/jquery-3.5.1.min.js"></script>
-    <script src="static/js/bootstrap.bundle.min.js"></script>
-    <script src="static/js/magnific-popup.min.js"></script>
-    <script src="static/js/fakeLoader.min.js"></script>
-    <script src="static/js/swiper-bundle.min.js"></script>
-    <script src="static/js/contact-form.js"></script>
-    <script src="static/js/jquery.nav.js"></script>
-    <script src="static/js/main.js"></script>
-    <!-- end script -->
+        <!-- script -->
+        <script src="static/js/jquery-3.5.1.min.js"></script>
+        <script src="static/js/bootstrap.bundle.min.js"></script>
+        <script src="static/js/magnific-popup.min.js"></script>
+        <script src="static/js/fakeLoader.min.js"></script>
+        <script src="static/js/swiper-bundle.min.js"></script>
+        <script src="static/js/contact-form.js"></script>
+        <script src="static/js/jquery.nav.js"></script>
+        <script src="static/js/main.js"></script>
+        <!-- end script -->
 
 </body>
 
