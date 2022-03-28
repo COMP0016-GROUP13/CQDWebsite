@@ -237,7 +237,7 @@
             <img src="./static/image/implementation/EditUrls.png" width="90%" alt="quick summary" class="img-thumbnail">
 
             <br>
-            <br> Both these pages use PUT requests to their repective API's (api/questions and api/questionURLs) and because they are both different tables this is done quite easily. The query system again shows its utility here as we can pass the dashboard_id
+            <br> Both these pages use PUT requests to their repective API's (<code>api/questions</code> and <code>api/questionURLs</code>) and because they are both different tables this is done quite easily. The query system again shows its utility here as we can pass the dashboard_id
             in as a parameter to the API in order to recieve the currect set of questions linked to the dashboard. Furthermore the table component itself performs it's own API calls. Each row is linked to a key which is standard practice for Next.js.
             The key in our system is also the question id which we can use to make a PUT or DELETE request to the api/question[id] endpoint. This efficient system make the codebase much cleaner and understandable.
         </div>
@@ -250,8 +250,8 @@
             Viewing dashboards</div>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
             This page is key in our implementation of the whole system. To access all the proper functionality of all of the main pages of the application, a user must first travel through this page.
-            The page is simple and just involves a GET request to /api/dashboard to fetch all the dashboard from the user's department. Keycloak stores the user's deparment_id so fetching is made simple
-            through a WHERE clause.
+            The page is simple and just involves a GET request to <code>/api/dashboard</code> to fetch all the dashboard from the user's department. Keycloak stores the user's deparment_id so fetching is made simple
+            through a <code>WHERE</code> clause.
 
             <br>
             <br>
@@ -259,7 +259,7 @@
             <img src="./static/image/implementation/view.png" width="90%" alt="quick summary" class="img-thumbnail">
 
             <br>
-            <br> While this page is simple, each dashboard button is linked to its respecitve dashboard id. Using URL query parameters (e.g *URL*?dashboard_id=*some number*) we are able to pass this ID around to 
+            <br> While this page is simple, each dashboard button is linked to its respecitve dashboard id. Using URL query parameters (e.g <strong>*URL*?dashboard_id=*some number*</strong>) we are able to pass this ID around to 
             all sub-pages. i.e the self reporting page and statistics page. This way we can pass this ID into the other API calls to fetch the correct questions for the correct dashboard
             <br>
             <br>
@@ -286,13 +286,77 @@
                 <br>
                 <br>
     
-                <img src="./static/image/implementation/adminMangage.png" width="90%" alt="quick summary" class="img-thumbnail">
+                <img src="./static/image/implementation/adminMangage.png" width="90%" alt="manage Admin" class="img-thumbnail">
     
                 <br>
                 <br>    
-                <br> As standard practice this table is a component with each cell having it's own API calls to create new records within the system. This page uses API endpoints for creating users (POST /api/users), 
-                and fetching data such as hospitals or health boards (GET /api/hospitals, GET /api/health_boards) through the API for administrators.
+                <br> As standard practice this table is a component with each cell having it's own API calls to create new records within the system. This page uses API endpoints for creating users (<code>POST /api/users</code>), 
+                and fetching data such as hospitals or health boards (<code>GET /api/hospitals</code>, <code>GET /api/health_boards</code>) through the API for administrators.
             </div>
+        </div>
+
+    </div>
+
+    <div class="container" style="padding: 0 0 3% 0;">
+        <h2 class="text-center" style="color:#00a2e8; border-style: double;">
+            SELF-REPORTING
+        </h2>
+
+        <br>
+
+        <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
+            Questions
+        </div>
+
+        <div class="h4 text-center" style="padding-bottom: 1em;">
+            This is the main function of the web-application. The self-report page asks users if they are engaging in a mentoring session. It provides a series of Likert Scale questions relating to the set standards, each with corresponding training URLs:
+            <br>
+            <br>
+    
+            <img src="./static/image/implementation/self-reporting.png" width="90%" alt="self report" class="img-thumbnail">
+    
+            <br>
+            <br> 
+            <br> It uses a component-based design, with <code>LikertScale</code>, and <code>LikertScaleQuestion</code>, and <code>Info</code> components (information buttons). As stated before, the correct questions need to be fetched from the correct dashboard.
+            This is done as explained previosly by using URL query params in the GET request to the <code>/api/questions</code> API endpoint. Furthermore correct validation is provided using REACT states where an <code>AlertDialog</code> component is created as the 
+            validation logic is required. The page also uses a POST request to <code>/api/responses</code> to save the responses to the database.
+        </div>
+
+    </div>
+
+    <div class="container" style="padding: 0 0 3% 0;">
+        <h2 class="text-center" style="color:#00a2e8; border-style: double;">
+            ERROR HANDLING
+        </h2>
+
+        <br>
+
+        <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
+            Error Pages
+        </div>
+
+        <div class="h4 text-center" style="padding-bottom: 1em;">
+            Our system needed to be versatile. This means handling every bad request, incorrect query, unknows URL in a suitable manner the user is able to understand.
+            <br>
+            <br>
+    
+            <img src="./static/image/implementation/error.png" width="90%" alt="error page" class="img-thumbnail">
+    
+            <br>
+            <br> 
+            <br> Fortunately NEXT.js comes built in with a system to create custom error pages. Every status code excluding error 404 can be handled creating the file <code>/pages/_error.js</code>. This page replaces the default NEXT.js error page with our own custom one that
+            we can use to mantain the same UI theme. This functions takes the error status code as a <code>prop</code> and uses it to display the correct error. However Error 404 is not handled in this file and the same process is applied by creating another file <code>/pages/custom404.js</code>
+        </div>
+
+        <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
+            System Errors
+        </div>
+
+        <div class="h4 text-center" style="padding-bottom: 1em;">
+            As states before if the some unknown error appears in the backend or the user has filled in incorrect information this is handled using REACT states. An <code>AlertDialog</code> component is created to be able to be used in the whole system. Taking in error codes as 
+            <code>props</code> and using the <code>message</code> key aquired from API responces, we are able to display the correct message to the user depeneding on the error.
+        </div>
+
     </div>
 
 
