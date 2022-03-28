@@ -101,13 +101,13 @@
         <div class="h4 text-center" style="padding-bottom: 1em;">
             All authentication methods (login and registration) are handled by Keycloak. Currently, our Keycloak database runs within a dockerised container on our linode server. Using a custom realm file, we were able to instantiate roles for each specific type
             of user on our system. When a user tries to securely login into our system with the keycloak portal, the authentication process is offloaded to Keycloak to check that the username and password is held within the keycloak database. However,
-            by using Prisma an ORM we can synchronize the data from the “Users” table from the keycloak database to our PostgreSQL database, which is hosted within a separate dockerised container.
+            by using Prisma as an ORM we can synchronize the data from the “Users” table from the keycloak database to our PostgreSQL database, which is hosted within a separate dockerised container.
         </div>
 
         <br>
 
         <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
-            PROCESS 2: Registration
+            Registration
         </div>
 
         <div class="h4 text-center" style="padding-bottom: 1em;">
@@ -129,7 +129,7 @@
 
         <div class="h4 text-center" style="padding-bottom: 1em;">
             For a given dashboard most users can navigate to the statistics page where they can view a graph of their overall progress. The score for each standard is stored from a number between 0 to 4. Therefore, the best way to represent this data is to convert
-            each score to a percentage. As a result, we can plot the Score (as a percentage) on the Y-axis and the Time (in Days) on the X-axis.
+            each score to a percentage. As a result, we get a line chart with the Score (as a percentage) on the Y-axis and the Time (in Days) on the X-axis.
             <br>
             <br>
 
