@@ -411,10 +411,6 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" data-target="#pills-4" role="tab">EFFICIENCY</a>
-                    </li>
-
-                    <li class="nav-item">
                         <a class="nav-link" data-toggle="pill" data-target="#pills-5" role="tab">COMPATIBILITY</a>
                     </li>
 
@@ -430,18 +426,18 @@
 
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active h4" id="pills-1" style="background-color: white; padding: 0.5em;">
-                    Since we met with our client on a weekly basis, we were able to greatly and incrementally re-structure the previous front-end of the website to adjust for the multidashboard feature, so that it was intuitive to use. We also included better media queries
-                    to support more mobile devices of different screen sizes. One area we would like to improve is that, for some visualisations such as tables with many coloumns, the mobile devices would need to rotate their screens to see the full chart,
-                    therefore if there was a way to indicate to the user to rotate the screen would improve the overall user experience
-
+                    We were able to incrementally re-structure the previous front-end of the website to adjust for the multidashboard feature. We would show our client and our users the updates on a weekly basis, to ensure that the fine details and design choices were up
+                    to standard and provided a good user experience. We also included better media queries to support different mobile devices which have varying screen sizes.
                     <br>
-                    <br> Overall, we focused usability while maintaining design principles such as visibility, consistency, and mapping throughout the development of the web application.
-
+                    <br> For some visualisations, such as displaying tables with many coloumns, mobile devices would need to rotate their screens, therefore if there was a way to indicate (via an alert dialog) to the user to rotate their screen, it would
+                    improve the overall user experience of our web application.
+                    <br>
+                    <br> Overall, we successfully focused on usability while maintaining HCI design principles such as visibility, consistency, and mapping throughout the front-end development of the web application.
                 </div>
 
                 <div class="tab-pane fade h4" id="pills-2" style="background-color: white; padding: 0.5em;">
-                    All requirements of our system have been met, and clinicians can begin using the system. Our application is scalable which means that platform adminsitrators can easily add new health boards and hospitals into the sytem, from which Hospitals can create
-                    new departments and departments can add new clincians.
+                    All requirements of our system have been met, and clinicians can begin using the system. Our application is scalable which means that platform adminsitrators can easily add new health boards and hospitals into the system and their respective users to
+                    control their accounts. From which Health board users can add new hospitals and Hospital users can create new departments. Finally, Department Managers can add new clincians. All invitations are done via keycloak.
                     <br>
                     <br> All dependencies used in our web application are popular and open-source. Our authentication and role-assignment processes are offloaded to Keycloak, which is also open-source, making it highly improbable to have security vulnerabilities.
                 </div>
@@ -453,44 +449,48 @@
                     one with more processing power and storage space will be a priority.
                     <br>
                     <br> Other factors that can rarely affect stability include:
-                    <ul>
+                    <ol>
                         <li>poor internet connection</li>
                         <li>poor system hardware</li>
-                    </ul>
+                    </ol>
                 </div>
 
                 <div class="tab-pane fade h4" id="pills-4" style="background-color: white; padding: 0.5em;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mauris nunc, lacinia sed dolor sit.
+                    From our requirements we wanted our web application to be responsive as most users will be using it on range of devices. Therefore, we were able to achieve this using media queries.
+                    <br>
+                    <br> Our project aimed to be accessible by all clincians via most web browsers. Currently, our end-to-end tests use the puppeteer api to instantiate visual tests of the firefox and google chrome browsers. From our tests, we can conclude
+                    that our project is compatible with chromium web browsers. For future development, we could conduct the same tests for other web browsers(such as Safari) to ensure full functionality accross all web browsers.
                 </div>
 
                 <div class="tab-pane fade h4" id="pills-5" style="background-color: white; padding: 0.5em;">
-                    Our project aimed to be accessible by all clincians via most web browsers. Currently, our end-to-end tests use the puppeteer api to instantiate visual tests of the firefox and google chrome browsers. From our tests, we can conclude that our project is
-                    compatible with chromium web browsers. For future development, we could conduct the same tests for other web browsers(such as Safari)to ensure full functionality accross all web browsers.
-                </div>
-
-                <div class="tab-pane fade h4" id="pills-6" style="background-color: white; padding: 0.5em;">
                     Going into the project, we knew that the level of code quality had to be maintained and improved where necessary. We wanted to prevent any confusion for future developers who undertake the next iteration of the project.
                     <br>
                     <br> <b> Technologies used to help maintain code quality: </b>
-                    <br> a) Prettier - To ensure code formatting was kept consistent accross javasctipt, html and css files in the project
+                    <br> a) Prettier - To ensure code formatting was kept consistent (spacing, line wrapping, indentation) accross most files in our project.
                     <br>
                     <br> b) SonarLint - To detect and fix general quality issues, such as unused variables and functions, missing semicolons, etc.
                     <br>
-                    <br> c) Along with our code quality tools, we further extended our documentation on our github repository in the form of README files, which highlight the architecture, deployment and getting started for the next developers who take
-                    on the project.
+                    <br>Along with our code quality tools, we further extended our documentation on our github repository in the form of README files, which highlight the architecture, deployment and getting started for the next developers who take on
+                    the project.
                     <br>
-                    <br> During development major changes were made to the backend, therefore using swagger and the OpenAPI specification we could document the REST API including the responses and parameters. It is currently hosted using github pages
+                    <br> During development major changes were made to the backend, therefore using swagger and the OpenAPI specification we could document the REST API including the responses and parameters. It is currently hosted on our github pages
                     and can be found <a href="https://comp0016-group13.github.io/CareQualityDashboard/">here</a>
+                    <br>
+                    <br> We also included workflows built in to our github repository so that changes made to the main branch would automatically generate documentation for our API, Test frontend components and deploy to our linode server. We could have
+                    developed this further to include automated tests for the backend and e2e. Although, on our local machines we are able to pass all unit tests.
                 </div>
 
-                <div class="tab-pane fade h4" id="pills-7" style="background-color: white; padding: 0.5em;">
+                <div class="tab-pane fade h4" id="pills-6" style="background-color: white; padding: 0.5em;">
                     We primarily used trello to communicate with our client about general updates and and to keep track of our progress in stages. It also helped us monitor completed tasks from each member during the development of the project.
                     <br>
-                    <br> The team created our telegram group chat for effective daily communications
+                    <br> The team created our own telegram group chat for effective daily communications
                     <br>
                     <br> For immediate responses to our client we used a whatsapp group chat.
                     <br>
                     <br> The team would meet via zoom to discuss about deliverables needed for the module, conduct pair programming and talk about future steps we would take in order to achieve our goals.
+                    <br>
+                    <br> While we thought that the team had continuous and effective communication with one another, we encountered bugs during our development stage. Therefore, the use of github issues would have been great to keep track of new tasks
+                    and existing bugs on our system.
                 </div>
             </div>
         </div>
@@ -503,8 +503,13 @@
 
         <div class="container" style="margin: 0 5%; padding: 1em;">
             <ol>
-                <li class="h4">Include expiry date for clinician join codes </li>
-                <li class="h4">Include a way to differentiate dashboards created by departments and adminsitrators</li>
+                <li class="h4">Fixing known bugs</li>
+                <br>
+                <li class="h4">Include expiry date for clinician join codes - This would prevent a user from unintentionally sharing an active link to many people</li>
+                <br>
+                <li class="h4">Include a way to differentiate dashboards created by departments and adminstrators</li>
+                <br>
+                <li class="h4">The ability to automatically save answers to self-report will be very helpful for users - Users on our system can be busy and may want to answer a self-report at a later stage</li>
             </ol>
         </div>
     </div>
