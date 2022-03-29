@@ -119,7 +119,7 @@
 
     <div class="container" style="padding: 0 0 3% 0;">
         <h2 style="color:#00a2e8; border-style: double;" class="text-center">
-            VISUALISATIONS
+            Statistics Page
         </h2>
         <br>
 
@@ -129,7 +129,7 @@
 
         <div class="h4 text-center" style="padding-bottom: 1em;">
             For a given dashboard most users can navigate to the statistics page where they can view a graph of their overall progress. The score for each standard is stored from a number between 0 to 4. Therefore, the best way to represent this data is to convert
-            each score to a percentage. As a result, we get a line chart with the Score (as a percentage) on the Y-axis and the Time (in Days) on the X-axis.
+            each score to a percentage. As a result, we get a line chart with the Score (as a percentage) on the Y-axis and the Time (in Days) on the X-axis. This is done by using the following SQL query:
             <br>
             <br>
 
@@ -137,11 +137,8 @@
 
             <br>
             <br> The system makes use of the <code>Line</code> component from the <code>react-chartjs-2</code> library which is a react wrapper for the Chart.js library. Since Chart.js is a client-side JavaScript library we are required to have a specific
-            format to render the graph. Therefore, we created another react component called <code>LineChart</code> to format the data from our API call to our PostgreSQL to correctly feed it into the Chart.js <code>Line</code> component.
-            <br>
-            <br> Following the Chart.js documentation, we can can utilise the legend selection to filter the line chart when the graph may be too complicated to analyse invidual health and care standards.
-
-
+            format to render the graph. Therefore, we created another react component called <code>LineChart</code> to format the data from our API call to our PostgreSQL to correctly feed it into the Chart.js <code>Line</code> component. Following the
+            Chart.js documentation, we can can utilise the legend selection to filter the line chart when the graph may be too complicated to analyse invidual health and care standards.
             <br>
             <br>
 
@@ -162,7 +159,8 @@
             <br>
             <img src="./static/picture/personal_analytics.png" width="90%" alt="personal_analytics">
             <br>
-            <br> Like the quick summary section, personal analytics displays messages depending on the average of all self-assessments taken for the given dashboard. The following cases show which message is displayed depending on the average performance:
+            <br> Like the quick summary section, personal analytics displays messages depending on the average of all self-assessments taken for the given dashboard. To do this we used the <code>Message</code> and <code>Panel</code> Component from react-suite
+            to list each piece of information respectively. The following cases show which message is displayed depending on the average performance:
 
             <br>
             <br>
@@ -197,10 +195,12 @@
             </table>
         </div>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            For a given dashboard most users can navigate to the statistics page where they can view a graph of their overall progress.
-            <br> As each score is stored from 0 to 4. To represent the score as a percentage, we do a simple calculation:
-            <br> Percentage = (score / 4) * 100
-            <br>As a result, we can plot the Score as a percentage on the Y axis and the Time in Days on the X axis.
+            Additionally, when a user has not been able to complete a self-report in a week, the following information is concatenated with the other previous messages:
+            <br>
+            <br>
+
+            <img src="./static/picture/completed_self_report.png " width="60% " alt="main line chart " class="img-thumbnail ">
+
         </div>
     </div>
 
@@ -230,9 +230,9 @@
             <img src="./static/image/implementation/EditUrls.png" width="90%" alt="quick summary" class="img-thumbnail">
 
             <br>
-            <br> Both these pages use PUT requests to their repective API's (<code>api/questions</code> and <code>api/questionURLs</code>) and because they are both different tables this is done quite easily. The query system again shows its utility here as we can pass the dashboard_id
-            in as a parameter to the API in order to recieve the currect set of questions linked to the dashboard. Furthermore the table component itself performs it's own API calls. Each row is linked to a key which is standard practice for Next.js.
-            The key in our system is also the question id which we can use to make a PUT or DELETE request to the api/question[id] endpoint. This efficient system make the codebase much cleaner and understandable.
+            <br> Both these pages use PUT requests to their repective API's (<code>api/questions</code> and <code>api/questionURLs</code>) and because they are both different tables this is done quite easily. The query system again shows its utility here
+            as we can pass the dashboard_id in as a parameter to the API in order to recieve the currect set of questions linked to the dashboard. Furthermore the table component itself performs it's own API calls. Each row is linked to a key which is
+            standard practice for Next.js. The key in our system is also the question id which we can use to make a PUT or DELETE request to the api/question[id] endpoint. This efficient system make the codebase much cleaner and understandable.
         </div>
 
 
@@ -242,9 +242,7 @@
         <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
             Viewing dashboards</div>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            This page is key in our implementation of the whole system. To access all the proper functionality of all of the main pages of the application, a user must first travel through this page.
-            The page is simple and just involves a GET request to <code>/api/dashboard</code> to fetch all the dashboard from the user's department. Keycloak stores the user's deparment_id so fetching is made simple
-            through a <code>WHERE</code> clause.
+            This page is key in our implementation of the whole system. To access all the proper functionality of all of the main pages of the application, a user must first travel through this page. The page is simple and just involves a GET request to <code>/api/dashboard</code>            to fetch all the dashboard from the user's department. Keycloak stores the user's deparment_id so fetching is made simple through a <code>WHERE</code> clause.
 
             <br>
             <br>
@@ -252,8 +250,8 @@
             <img src="./static/image/implementation/view.png" width="90%" alt="quick summary" class="img-thumbnail">
 
             <br>
-            <br> While this page is simple, each dashboard button is linked to its respecitve dashboard id. Using URL query parameters (e.g <strong>*URL*?dashboard_id=*some number*</strong>) we are able to pass this ID around to 
-            all sub-pages. i.e the self reporting page and statistics page. This way we can pass this ID into the other API calls to fetch the correct questions for the correct dashboard
+            <br> While this page is simple, each dashboard button is linked to its respecitve dashboard id. Using URL query parameters (e.g <strong>*URL*?dashboard_id=*some number*</strong>) we are able to pass this ID around to all sub-pages. i.e the
+            self reporting page and statistics page. This way we can pass this ID into the other API calls to fetch the correct questions for the correct dashboard
             <br>
             <br>
             <br> The view page also comes with the search filter. Of course as the website scales, the number of dashboard may increase to a level where many pages are required. Our team has implented this feautre to make user expiienve much easier, espically
@@ -279,13 +277,13 @@
                 Eventhough User Management comes in built within the Keycloak admin console we have expanded on the an admin page where they are able to create health boards, hospitals and other admins
                 <br>
                 <br>
-    
+
                 <img src="./static/image/implementation/adminMangage.png" width="90%" alt="manage Admin" class="img-thumbnail">
-    
+
                 <br>
-                <br>    
-                <br> As standard practice this table is a component with each cell having it's own API calls to create new records within the system. This page uses API endpoints for creating users (<code>POST /api/users</code>), 
-                and fetching data such as hospitals or health boards (<code>GET /api/hospitals</code>, <code>GET /api/health_boards</code>) through the API for administrators.
+                <br>
+                <br> As standard practice this table is a component with each cell having it's own API calls to create new records within the system. This page uses API endpoints for creating users (<code>POST /api/users</code>), and fetching data such
+                as hospitals or health boards (<code>GET /api/hospitals</code>, <code>GET /api/health_boards</code>) through the API for administrators.
             </div>
         </div>
 
@@ -306,14 +304,14 @@
             This is the main function of the web-application. The self-report page asks users if they are engaging in a mentoring session. It provides a series of Likert Scale questions relating to the set standards, each with corresponding training URLs:
             <br>
             <br>
-    
+
             <img src="./static/image/implementation/self-reporting.png" width="90%" alt="self report" class="img-thumbnail">
-    
+
             <br>
-            <br> 
-            <br> It uses a component-based design, with <code>LikertScale</code>, and <code>LikertScaleQuestion</code>, and <code>Info</code> components (information buttons). As stated before, the correct questions need to be fetched from the correct dashboard.
-            This is done as explained previosly by using URL query params in the GET request to the <code>/api/questions</code> API endpoint. Furthermore correct validation is provided using REACT states where an <code>AlertDialog</code> component is created as the 
-            validation logic is required. The page also uses a POST request to <code>/api/responses</code> to save the responses to the database.
+            <br>
+            <br> It uses a component-based design, with <code>LikertScale</code>, and <code>LikertScaleQuestion</code>, and <code>Info</code> components (information buttons). As stated before, the correct questions need to be fetched from the correct
+            dashboard. This is done as explained previosly by using URL query params in the GET request to the <code>/api/questions</code> API endpoint. Furthermore correct validation is provided using REACT states where an <code>AlertDialog</code> component
+            is created as the validation logic is required. The page also uses a POST request to <code>/api/responses</code> to save the responses to the database.
         </div>
 
     </div>
@@ -333,13 +331,14 @@
             Our system needed to be versatile. This means handling every bad request, incorrect query, unknows URL in a suitable manner the user is able to understand.
             <br>
             <br>
-    
+
             <img src="./static/image/implementation/error.png" width="90%" alt="error page" class="img-thumbnail">
-    
+
             <br>
-            <br> 
-            <br> Fortunately NEXT.js comes built in with a system to create custom error pages. Every status code excluding error 404 can be handled creating the file <code>/pages/_error.js</code>. This page replaces the default NEXT.js error page with our own custom one that
-            we can use to mantain the same UI theme. This functions takes the error status code as a <code>prop</code> and uses it to display the correct error. However Error 404 is not handled in this file and the same process is applied by creating another file <code>/pages/custom404.js</code>
+            <br>
+            <br> Fortunately NEXT.js comes built in with a system to create custom error pages. Every status code excluding error 404 can be handled creating the file <code>/pages/_error.js</code>. This page replaces the default NEXT.js error page with
+            our own custom one that we can use to mantain the same UI theme. This functions takes the error status code as a <code>prop</code> and uses it to display the correct error. However Error 404 is not handled in this file and the same process
+            is applied by creating another file <code>/pages/custom404.js</code>
         </div>
 
         <div class="h3 text-center" style="padding-bottom: 1em; color:#00a2e8;">
@@ -347,7 +346,8 @@
         </div>
 
         <div class="h4 text-center" style="padding-bottom: 1em;">
-            As states before if the some unknown error appears in the backend or the user has filled in incorrect information this is handled using REACT states. An <code>AlertDialog</code> component is created to be able to be used in the whole system. Taking in error codes as 
+            As states before if the some unknown error appears in the backend or the user has filled in incorrect information this is handled using REACT states. An <code>AlertDialog</code> component is created to be able to be used in the whole system.
+            Taking in error codes as
             <code>props</code> and using the <code>message</code> key aquired from API responces, we are able to display the correct message to the user depeneding on the error.
         </div>
 
@@ -358,26 +358,26 @@
 
 
 
-        <!-- end contents -->
+    <!-- end contents -->
 
-        <!-- footer bottom -->
-        <div class="container">
-            <div class="footer-bottom box-content section-bottom-only">
-                <span>Copyright © 2021-2022 CareQualityDashboard, UCL IXN Team 13. All Rights Reserved.</span>
-            </div>
+    <!-- footer bottom -->
+    <div class="container">
+        <div class="footer-bottom box-content section-bottom-only">
+            <span>Copyright © 2021-2022 CareQualityDashboard, UCL IXN Team 13. All Rights Reserved.</span>
         </div>
-        <!-- end footer bottom -->
+    </div>
+    <!-- end footer bottom -->
 
-        <!-- script -->
-        <script src="static/js/jquery-3.5.1.min.js"></script>
-        <script src="static/js/bootstrap.bundle.min.js"></script>
-        <script src="static/js/magnific-popup.min.js"></script>
-        <script src="static/js/fakeLoader.min.js"></script>
-        <script src="static/js/swiper-bundle.min.js"></script>
-        <script src="static/js/contact-form.js"></script>
-        <script src="static/js/jquery.nav.js"></script>
-        <script src="static/js/main.js"></script>
-        <!-- end script -->
+    <!-- script -->
+    <script src="static/js/jquery-3.5.1.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/magnific-popup.min.js"></script>
+    <script src="static/js/fakeLoader.min.js"></script>
+    <script src="static/js/swiper-bundle.min.js"></script>
+    <script src="static/js/contact-form.js"></script>
+    <script src="static/js/jquery.nav.js"></script>
+    <script src="static/js/main.js"></script>
+    <!-- end script -->
 
 </body>
 
