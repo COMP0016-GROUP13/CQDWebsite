@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Research</title>
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research</title>
 
-	<!-- font -->
-	<link href="static/css/css2.css" rel="stylesheet">
-	<!-- end font -->
 
-	<link rel="stylesheet" href="static/css/bootstrap.css">
-	<link rel="stylesheet" href="static/css/ionicons.min.css">
-	<link rel="stylesheet" href="static/css/magnific-popup.css">
-	<link rel="stylesheet" href="static/css/fakeLoader.min.css">
-	<link rel="stylesheet" href="static/css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="static/css/style.css">
+    <!-- font -->
+    <link href="static/css/css2.css" rel="stylesheet">
+    <!-- end font -->
+
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/ionicons.min.css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/css/fakeLoader.min.css">
+    <link rel="stylesheet" href="static/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
 
-	<!-- loader -->
-	<div class="fakeLoader"></div>
-	<!-- end loader -->
+    <!-- loader -->
+    <div class="fakeLoader"></div>
+    <!-- end loader -->
 
-	<!-- navbar -->
-	<div style="padding: 5% 0 5% 0;">
+    <!-- navbar -->
+    <div style="padding: 5% 0 5% 0;">
         <nav class="navbar navbar-expand-md navbar-light fixed-top">
             <div class="container">
                 <a href="index.html" class="navbar-brand">
@@ -39,35 +41,35 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="requirements.html">Requirements</a>
                         </li>
-    
+
                         <li class="nav-item current">
                             <a class="nav-link" href="research.html">Research</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="uidesign.html">UI Design</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="systemdesign.html">System Design</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="implementation.html">Implementation</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="testing.html">Testing</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="evaluation.html">Evaluation</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="appendices.html">Appendices</a>
                         </li>
@@ -76,7 +78,7 @@
             </div>
         </nav>
     </div>
-	<!-- end navbar -->
+    <!-- end navbar -->
 
     <!-- contents -->
     <div class="container" style="padding: 0 0 6% 0;">
@@ -85,16 +87,10 @@
         </div>
 
         <div class="h4 col text-center" style="margin: 1em 0 1em 0;">
-            Before proceeding with the project, we did some extensive research on the technical choices that we 
-            have to make in order to implement the extended dashboard. These include the programming language, frameworks,
-            authentication system and technology stacks. From the previous iteration of this project, we had a 
-            web stack given to us to use. However this stack seemed quite 
-            “over-the-top” for our requirements and the middleware SSO, which is Keycloak, was completely new and had very little documentation
-            for us to adapt to. Our team only had one member familiar with web development 
-            and this was only in the front-end. Migrating the whole codebase to something such as Django, while easier
-            to use and understand, would take much more time than required, and while we were doing that, we would have adapted
-            to the new stack in the process. The following diagram simplifies the stack implemented for our dashboard along
-            with the related project that we researched on:
+            Before proceeding with the project, we did some extensive research on the technical choices that we have to make in order to implement the extended dashboard. These include the programming language, frameworks, authentication system and technology stacks.
+            From the previous iteration of this project, we had a web stack given to us to use. However this stack seemed quite “over-the-top” for our requirements and the middleware SSO, which is Keycloak, was completely new and had very little documentation
+            for us to adapt to. Our team only had one member familiar with web development and this was only in the front-end. Migrating the whole codebase to something such as Django, while easier to use and understand, would take much more time than
+            required, and while we were doing that, we would have adapted to the new stack in the process. The following diagram simplifies the stack implemented for our dashboard along with the related project that we researched on:
         </div>
 
         <div class="container">
@@ -120,24 +116,15 @@
 
         <div class="h4 col text-center" style="margin: 1em 0 1em 0;">
             The Care Quality Dashboard development was started by group 20 from the 2020/2021 cohort of UCL's Industry Exchange Network (IXN)
-            <span style="color: #e84d00;">[1]</span> and our team is responsible 
-            for extending this project by adding more useful features for the clinicians from NHS Wales. Therefore, the most important
-            project that we have study is the pre-existing project structure. The project codes have been well-documented by the previous 
-            team and it helps us in understanding the features available at present. <br><br>
-
-            After studying the codes of the previous team available on Github<span style="color: #e84d00;"> [2]</span>, we can conclude some of the main features of the dashboard.
-            Firstly, the main component of the dashboard is the self-evaluation page. This is the central function of the platform, which is 
-            to allow for clinicians' self-reports. Next, another great feature is that statistics of these clinicians can be displayed in an 
-            interactive manner. The statistics can also be filtered according to dates and departments, which is great for supervision by supervisors
-            on fellow clinicians. Finally, a main feature that is available on the pre-existing website is the ability of administrators to 
-            manage the users, questions, departments and even, health boards using the application. This feature is very fundamental in order to 
-            ensure the platform can be expanded and used across various different departments. <br><br>
-
-            In essence, we have learnt a lot just by looking at the codes from the previous team. First and foremost, we managed to understand 
-            the basics on how to set up the project. This is because the github repository comes with a README.md file<span style="color: #e84d00;"> [3]</span>, which helps in setting up 
-            the environment of the system. Not just that, we also learnt how the various different techical components are integrated and used 
-            together to ensure the usability of the platform. Also, by reading through the architecture documentation<span style="color: #e84d00;"> [4]</span> of the dashboard, we gained
-            a high-level view of how the front-end and back-end are connected.
+            <span style="color: #e84d00;">[1]</span> and our team is responsible for extending this project by adding more useful features for the clinicians from NHS Wales. Therefore, the most important project that we have study is the pre-existing
+            project structure. The project codes have been well-documented by the previous team and it helps us in understanding the features available at present. <br><br> After studying the codes of the previous team available on Github<span style="color: #e84d00;"> [2]</span>,
+            we can conclude some of the main features of the dashboard. Firstly, the main component of the dashboard is the self-evaluation page. This is the central function of the platform, which is to allow for clinicians' self-reports. Next, another
+            great feature is that statistics of these clinicians can be displayed in an interactive manner. The statistics can also be filtered according to dates and departments, which is great for supervision by supervisors on fellow clinicians. Finally,
+            a main feature that is available on the pre-existing website is the ability of administrators to manage the users, questions, departments and even, health boards using the application. This feature is very fundamental in order to ensure the
+            platform can be expanded and used across various different departments. <br><br> In essence, we have learnt a lot just by looking at the codes from the previous team. First and foremost, we managed to understand the basics on how to set up
+            the project. This is because the github repository comes with a README.md file<span style="color: #e84d00;"> [3]</span>, which helps in setting up the environment of the system. Not just that, we also learnt how the various different techical
+            components are integrated and used together to ensure the usability of the platform. Also, by reading through the architecture documentation<span style="color: #e84d00;"> [4]</span> of the dashboard, we gained a high-level view of how the
+            front-end and back-end are connected.
         </div>
 
     </div>
@@ -154,24 +141,15 @@
             </div>
 
             <div class="h4 col text-center" style="margin: 1em 0 2em 0;">
-                Since our client is inclined towards creating an online accesible web application, it is important for us to ensure that most devices
-                can support the running of our programme. For creating such web application, we have a few choices of programming languages to be used 
-                to structure our project. After doing our own research, we narrowed down the possible languages to two: JavaScript and Python. However,
-                after further discussions, our team decided to go forward with JavaScript. The reason why we did not choose Python was because it is a 
-                backend server-side programming language. This being said, Python cannot be utilised on its own because it needs to work with requests 
-                involving HTML, CSS and even JavaScript<span style="color: #e84d00;"> [5]</span>. Additionally, even with the existance of frameworks for website development using Python 
-                such as Django available, it will be a steep learning curve for us to easily code using Python. Finally, the performance of websites 
-                created using Python may be poor because of its slower speed in comparison to JavaScript<span style="color: #e84d00;"> [6]</span>.<br><br>
-
-                On the other hand, JavaScript is generally a more popular choice of programming language used in web development (web-dev). Based on a 2021 survey carried out by 
-                Stack Overflow, out of 83,052 respondents, about 65 percent of them use JavaScript as their main language for web-dev<span style="color: #e84d00;"> [7]</span>. As such, it
-                is easier for us to gain help from the community in case we encounter any problem during development. 
-                Also, JavaScript has the advantage of speed, which is useful to save time of the clinicians using our platform. The image below depicts the 
-                statistics mentioned above<span style="color: #e84d00;"> [7]</span>. <br><br>
-
-                Finally, we have decided to develop or project using JavaScript because of all the possible benefits and convenience 
-                that we can gain by its usage. Not to forget, since this is a legacy project written mostly in JavaScript, it would be 
-                hard for us to rewrite all of the exisiting code using another language as this will consume a lot of our time.<br><br>
+                Since our client is inclined towards creating an online accesible web application, it is important for us to ensure that most devices can support the running of our program. For creating such web application, we have a few choices of programming languages
+                to be used to structure our project. After doing our own research, we narrowed down the possible languages to two: JavaScript and Python. However, after further discussions, our team decided to go forward with JavaScript. The reason why
+                we did not choose Python was because it is a backend server-side programming language. This being said, Python cannot be utilised on its own because it needs to work with requests involving HTML, CSS and even JavaScript
+                <span style="color: #e84d00;"> [5]</span>. Additionally, even with the existance of frameworks for website development using Python such as Django available, it will be a steep learning curve for us to easily code using Python. Finally,
+                the performance of websites created using Python may be poor because of its slower speed in comparison to JavaScript<span style="color: #e84d00;"> [6]</span>.<br><br> On the other hand, JavaScript is generally a more popular choice of
+                programming language used in web development (web-dev). Based on a 2021 survey carried out by Stack Overflow, out of 83,052 respondents, about 65 percent of them use JavaScript as their main language for web-dev<span style="color: #e84d00;"> [7]</span>.
+                As such, it is easier for us to gain help from the community in case we encounter any problem during development. Also, JavaScript has the advantage of speed, which is useful to save time of the clinicians using our platform. The image
+                below depicts the statistics mentioned above<span style="color: #e84d00;"> [7]</span>. <br><br> Finally, we have decided to develop or project using JavaScript because of all the possible benefits and convenience that we can gain by its
+                usage. Not to forget, since this is a legacy project written mostly in JavaScript, it would be hard for us to rewrite all of the exisiting code using another language as this will consume a lot of our time.<br><br>
 
                 <div class="container">
                     <img src="static/image/research/most-used-language.png" style="width:100%; margin: 0 0 2.5% 0;" class="img-thumbnail">
@@ -185,34 +163,30 @@
             </div>
 
             <div class="h4 col text-center" style="margin: 1em 0 2em 0;">
-                After deciding to use JavaScript as our main programming language, we explored the various different libraries available for 
-                use. For our front-end, we decided that React is suitable to be integrated into our system due to several deciding factors but largely 
-                due to the fact that it is the most popular libraries in use for website development, with competition from Angular and Vue.js. According 
-                to npm-stat, about 500 million downloads of React has been recorded in 2021 alone. With this large community using the library, we believe
-                there must be great support available for helping our project development<span style="color: #e84d00;"> [8]</span>. Some of the many 
-                advantages of incorporating this library in our project include increased speed and performance of the website.
+                After deciding to use JavaScript as our main programming language, we explored the various different libraries available for use. For our front-end, we decided that React is suitable to be integrated into our system due to several deciding factors but
+                largely due to the fact that it is the most popular libraries in use for website development, with competition from Angular and Vue.js. According to npm-stat, about 500 million downloads of React has been recorded in 2021 alone. With this
+                large community using the library, we believe there must be great support available for helping our project development<span style="color: #e84d00;"> [8]</span>. Some of the many advantages of incorporating this library
+                in our project include increased speed and performance of the website.
                 <span style="color: #e84d00;"> [9]</span>. <br><br>
 
                 <div class="container">
                     <img src="static/image/research/react-stats.png" style="width:100%; margin: 0 0 2.5% 0;" class="img-thumbnail">
                 </div>
 
-                As React is a good choice of library for web-development, we decided to implement Next.js as the framework for React in order to develop single page 
-                Javascript applications<span style="color: #e84d00;"> [10]</span>. React is built on top of Node.js, which enables React-based functionalities including server-side rendering. Below are some of the 
-                benefits we can gain by implementing the Next.js framework. <br><br>
+                As React is a good choice of library for web-development, we decided to implement Next.js as the framework for React in order to develop single page Javascript applications<span style="color: #e84d00;"> [10]</span>. React is built on top
+                of Node.js, which enables React-based functionalities including server-side rendering. Below are some of the benefits we can gain by implementing the Next.js framework. <br><br>
 
                 <div class="container">
                     <li>
-                        <span style="color: #00a2e8;">Server-side Rendering (SSR)</span> - React components on the front-end of the website are rendered on the server side. This
-                        leads to a much faster loading time for users<span style="color: #e84d00;"> [11]</span>
+                        <span style="color: #00a2e8;">Server-side Rendering (SSR)</span> - React components on the front-end of the website are rendered on the server side. This leads to a much faster loading time for users<span style="color: #e84d00;"> [11]</span>
                     </li>
                     <li>
-                        <span style="color: #00a2e8;">Automatic Code Splitting</span> - Reducing the size of the application by splitting the codes into smaller pieces or chunks 
-                        and only load the chunks as needed. This also increases the speed of loading for the webpages<span style="color: #e84d00;"> [12]</span>
+                        <span style="color: #00a2e8;">Automatic Code Splitting</span> - Reducing the size of the application by splitting the codes into smaller pieces or chunks and only load the chunks as needed. This also increases the speed of loading
+                        for the webpages<span style="color: #e84d00;"> [12]</span>
                     </li>
                     <li>
-                        <span style="color: #00a2e8;">Static Page Generation</span> - Websites are rendered at build time to output static HTML files along with assets such as 
-                        JavaScript and CSS. This ultimately results in an <i>ultra fast</i> loading experience for all users, according to Next.js themselves.<span style="color: #e84d00;"> [13]</span>
+                        <span style="color: #00a2e8;">Static Page Generation</span> - Websites are rendered at build time to output static HTML files along with assets such as JavaScript and CSS. This ultimately results in an <i>ultra fast</i> loading
+                        experience for all users, according to Next.js themselves.<span style="color: #e84d00;"> [13]</span>
                     </li><br>
                 </div>
             </div>
@@ -221,58 +195,41 @@
                 <div class="h2 col text-center" style="color:#00a2e8; border-style: dashed;">
                     VISUALISATION TECHNOLOGIES
                 </div>
-    
+
                 <div class="h4 col text-center" style="margin: 1em 0 2em 0;">
-                    Visualising the statistics gathered after self-evaluations of a report is essential to provide the clinicians with the 
-                    idea of how they are progressing in terms of care quality. Also, visualisation helps senior staff to supervise fellow
-                    clinicians. The previous implementation of the Care Quality Dashboard used Chart.js for visualisations, but we 
-                    decided to look into other graphing libraries for considering other alternatives. We then found the JavaScript library, D3.js,
-                    which is mainly used to create interactive data visualisations.  The table below shows a summary of the comparisons made
-                    between the previous library used and D3.js <span style="color: #e84d00;"> [14]</span>:
-    
+                    For a given dashboard, visualising the progress of health and care standards is essential. Also, visualisation help senior staff to supervise fellow clinicians. The previous implementation of the Care Quality Dashboard used Chart.js for visualisations,
+                    but we decided to look into alternative graphing libraries. We then found the JavaScript library, D3.js, which is mainly used to create interactive data visualisations. The table below shows a summary of the comparisons made between
+                    the previous library used and D3.js <span style="color: #e84d00;"> [14]</span>:
+
                     <div class="container" style="padding: 0 0 1em 0;">
                         <img src="static/image/research/visualisation.png" style="width:70%; margin: 2.5% 0 0 0;" class="img-thumbnail">
                     </div>
 
-                    From our research, we decided to continue using the Chart.js library. This is because Chart.js is beginner-friendly which makes it 
-                    a great fit considering the team's background in web development. Also our system does not require a complex graphical 
-                    visualisation, but instead we just need to display a line graph. Therefore, using the Chart.js Line component will aid us in creating 
-                    the visualisation effectively and quickly without causing unnecessary complications.<br><br>
-
+                    From our research, we decided to continue using the Chart.js library. This is because Chart.js is beginner-friendly which makes it a great fit considering the team's background in web development. Also our system does not require a complex graphical visualisation,
+                    but instead we just need to display a line graph. Therefore, using the Chart.js Line component will aid us in creating the visualisation effectively and quickly without causing unnecessary complications.<br><br>
                 </div>
             </div>
         </div>
 
         <div class="container">
             <div class="h2 col text-center" style="color:#00a2e8; border-style: dashed;">
-                LOGIN SYSTEM
+                Identity and Access Management tool
             </div>
 
             <div class="h4 col text-center" style="margin: 1em 0 2em 0;">
-                To ensure that users can authenticate themselves in order to use the dashboard, it is incredibly important to have a secure way of logging in users into the system. It
-                is also important to find a system, which is easily understood by users as we do not want to over-complicate them. Therefore, we considered three different login systems:
-                Keycloak, Microsoft Azure Single Sign On (SSO) and NHS Identity. <br><br>
+                To ensure that users can authenticate themselves in order to use the dashboard, it is incredibly important to have a secure way of logging in users into the system. It is also important to find a system, which is easily understood by users as we do not
+                want to over-complicate them. Therefore, we considered three different login systems: Keycloak, Microsoft Azure Single Sign On (SSO) and NHS Identity. <br><br> At first we are very inclined towards NHS Identity because
+                it should be intuitive to use by NHS users as the system has already been implemented within the organisation. NHS Identity is actually the current technology for healthcare personnels to authenticate themselves for accessing England's
+                clinical information systems<span style="color: #e84d00;"> [15]</span>. However, after doing some research, we found out that this system may not be able to be used for our platform due to several reasons. Firstly, NHS Identity is mostly
+                in use in England for NHS England. Therefore, it is quite hard for our dashboard to be used by NHS Wales if we choose to utilise this login system because most clinicians in Wales cannot even access it. Secondly, only staff with a smart
+                card can authenticate themselves using the NHS Identity. In fact, not all NHS staff have the card mentioned above, hence, this method may not be viable for our self-evaluating platform. <br><br> Another option we have in hand is Microsoft
+                Azure Single Sign On (SSO) system for authentication of users. Using this method, the login process would have been offloaded to Microsoft and would have saved development time. However, we do have a lot of different roles to be created
+                and assigned to different NHS staff. By using the SSO, we would have to manually assign roles to users and this can be a huge inconvenience for our team.<br><br> Keycloak is another option that we have at hand. According to its documentation,
+                Keycloak is an identity and access management solution (IAM) which has been used by various applications for authentication purposes and it was developped by RedHat, the largest open-source software manufacturer<span style="color: #e84d00;"> [16]</span>.
+                It is a secure authentication system with multiple useful features, which will be a good fit to be integrated into our dashboard<span style="color: #e84d00;"> [17]</span>. Some of the features include high-performance due its lightweight
+                nature, Single Sign-On (SSO) for multiple applications and centralised management for users and administrations. In comparison with the Microsoft Azure Single Sign On (SSO), Keycloak has an in-built feature to help assign roles to users
+                of the system, which is a huge advantage for us. Below is the simplification of all the features, taken from its official website, that shows how Keycloak would make a good candidate for us to manage our login system<span style="color: #e84d00;"> [18]</span>.
 
-                At first we are very inclined towards NHS Identity because it should be intuitive to use by NHS users as the system has already been implemented within the organisation.
-                NHS Identity is actually the current technology for healthcare personnels to authenticate themselves for accessing England's clinical information systems<span style="color: #e84d00;"> [15]</span>.
-                However, after doing some research, we found out that this system may not be able to be used for our platform due to several reasons. Firstly, NHS Identity is mostly 
-                in use in England for NHS England. Therefore, it is quite hard for our dashboard to be used by NHS Wales if we choose to utilise this login system because most clinicians in 
-                Wales cannot even access it. Secondly, only staff with a smart card can authenticate themselves using the NHS Identity. In fact, not all NHS staff have the card mentioned above, hence, 
-                this method may not be viable for our self-evaluating platform. <br><br>
-
-                Another option we have in hand is Microsoft Azure Single Sign On (SSO) system for authentication of users. Using this method, the login process would have been offloaded to Microsoft 
-                and would have saved development time. However, we do have a lot of different roles to be created and assigned to different NHS staff. By using the SSO, we would have to 
-                manually assign roles to users and this can be a huge inconvenience for our team.<br><br>
-
-                Keycloak is another option that we have at hand. According to its documentation, Keycloak is an identity and access management solution (IAM) which has been used by various 
-                applications for authentication purposes and it was developped by RedHat, the largest open-source software manufacturer<span style="color: #e84d00;"> [16]</span>. 
-                It is a secure authentication system with multiple useful features, which will be a good fit to be integrated into 
-                our dashboard<span style="color: #e84d00;"> [17]</span>. Some of the features include high-performance due its lightweight nature, Single Sign-On (SSO) for multiple applications and centralised management for 
-                users and administrations. In comparison with the Microsoft Azure Single Sign On (SSO), Keycloak has an in-built feature to help assign roles to users of the system, 
-                which is a huge advantage for us.
-                Below is the simplification of all the features, taken from its official website,
-                that shows how Keycloak would make a good candidate for us to manage our login system<span style="color: #e84d00;"> [18]</span>.
-                
                 <div class="container">
                     <img src="static/image/research/keycloak-benefits.png" style="width:100%; margin: 2.5% 0 0 0;" class="img-thumbnail">
                 </div>
@@ -281,7 +238,7 @@
         </div>
     </div>
 
-    
+
 
 
 
@@ -291,18 +248,14 @@
         </div>
 
         <div class="h3 col text-center">
-            For a look at our simplified system architecture diagram, <a href="systemdesign.html" style="color: #00a2e8">click here</a>. 
-            As a conclusion, we would like to reiterate our main technical choices for this project:
+            For a look at our simplified system architecture diagram, <a href="systemdesign.html" style="color: #00a2e8">click here</a>. As a conclusion, we would like to reiterate our main technical choices for this project:
         </div>
 
 
         <div class="h4 col " style="margin: 1em 0 2em 10em;">
-            1) JavaScript would be our primary programming language<br>
-            2) Our back-end will be built using Prisma as an ORM<br>
-            3) Next.js will be our front-end framework<br>
-            4) Our system's login will be handled by Keycloak<br>
-            5) PostgreSQL will manage our dashboard database
-            
+            1) JavaScript would be our primary programming language<br> 2) Our back-end will be built using Prisma as an ORM<br> 3) Next.js will be our front-end framework<br> 4) Our system's login will be handled by Keycloak<br> 5) PostgreSQL will manage
+            our dashboard database
+
         </div>
     </div>
 
@@ -314,23 +267,30 @@
         </div>
 
         <div class="h5">
-            <span style="color: #e84d00;">[1] </span>UCL Computer Science. 2021. UCL Industry Exchange Network (UCL IXN). [online] Available at: <a href="https://www.ucl.ac.uk/computer-science/collaborate/ucl-industry-exchange-network-ucl-ixn" style="color: #00a2e8;">https://www.ucl.ac.uk/computer-science/collaborate/ucl-industry-exchange-network-ucl-ixn</a> [Accessed 20 October 2021].<br>
-            <span style="color: #e84d00;">[2] </span>Jain, S., Zielinski, M. and Schulz, M., 2021. GitHub - UCLComputerScience/COMP0016_2020_21_Team20. [online] GitHub. Available at: <a href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team20" style="color: #00a2e8">https://github.com/UCLComputerScience/COMP0016_2020_21_Team20</a> [Accessed 21 October 2021].<br>
-            <span style="color: #e84d00;">[3] </span>GitHub. 2021. README.md. [online] Available at: <a href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/README.md" style="color: #00a2e8">https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/README.md</a> [Accessed 23 October 2021].<br>
-            <span style="color: #e84d00;">[4] </span>GitHub. 2022. ARCHITECTURE.md. [online] Available at: <a href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/ARCHITECTURE.md" style="color: #00a2e8">https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/ARCHITECTURE.md</a> [Accessed 23 October 2021].<br>
-            <span style="color: #e84d00;">[5] </span>Computer.org. n.d. 5 Reasons JavaScript is Still Better Than Python. [online] Available at: <a href="https://www.computer.org/publications/tech-news/build-your-career/5-reasons-javascript-is-still-better-than-python" style="color: #00a2e8">https://www.computer.org/publications/tech-news/build-your-career/5-reasons-javascript-is-still-better-than-python</a> [Accessed 27 October 2021].<br>
-            <span style="color: #e84d00;">[6] </span>Habr. 2019. Python vs JavaScript: Which One Can Benefit You The Most?. [online] Available at: <a href="https://habr.com/en/post/471134/" style="color: #00a2e8">https://habr.com/en/post/471134/</a> [Accessed 27 October 2021].<br>
-            <span style="color: #e84d00;">[7] </span>Stack Overflow. 2021. Stack Overflow Developer Survey 2021. [online] Available at: <a href="https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages" style="color: #00a2e8">https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages</a> [Accessed 2 November 2021].<br>
-            <span style="color: #e84d00;">[8] </span>Imaginary Cloud. 2021. Next.js vs React: What are the differences?. [online] Available at: <a href="https://www.imaginarycloud.com/blog/next-js-vs-react/" style="color: #00a2e8">https://www.imaginarycloud.com/blog/next-js-vs-react/</a> [Accessed 1 January 2022].<br>
-            <span style="color: #e84d00;">[9] </span>Da-14.com. 2017. Top 10 Advantages of Using React.js. [online] Available at: <a href=https://da-14.com/blog/its-high-time-reactjs-ten-reasons-give-it-try style="color: #00a2e8">https://da-14.com/blog/its-high-time-reactjs-ten-reasons-give-it-try</a> [Accessed 7 November 2021].<br>
+            <span style="color: #e84d00;">[1] </span>UCL Computer Science. 2021. UCL Industry Exchange Network (UCL IXN). [online] Available at: <a href="https://www.ucl.ac.uk/computer-science/collaborate/ucl-industry-exchange-network-ucl-ixn" style="color: #00a2e8;">https://www.ucl.ac.uk/computer-science/collaborate/ucl-industry-exchange-network-ucl-ixn</a>            [Accessed 20 October 2021].<br>
+            <span style="color: #e84d00;">[2] </span>Jain, S., Zielinski, M. and Schulz, M., 2021. GitHub - UCLComputerScience/COMP0016_2020_21_Team20. [online] GitHub. Available at: <a href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team20"
+                style="color: #00a2e8">https://github.com/UCLComputerScience/COMP0016_2020_21_Team20</a> [Accessed 21 October 2021].<br>
+            <span style="color: #e84d00;">[3] </span>GitHub. 2021. README.md. [online] Available at: <a href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/README.md" style="color: #00a2e8">https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/README.md</a>            [Accessed 23 October 2021].<br>
+            <span style="color: #e84d00;">[4] </span>GitHub. 2022. ARCHITECTURE.md. [online] Available at: <a href="https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/ARCHITECTURE.md" style="color: #00a2e8">https://github.com/UCLComputerScience/COMP0016_2020_21_Team20/blob/main/ARCHITECTURE.md</a>            [Accessed 23 October 2021].<br>
+            <span style="color: #e84d00;">[5] </span>Computer.org. n.d. 5 Reasons JavaScript is Still Better Than Python. [online] Available at: <a href="https://www.computer.org/publications/tech-news/build-your-career/5-reasons-javascript-is-still-better-than-python"
+                style="color: #00a2e8">https://www.computer.org/publications/tech-news/build-your-career/5-reasons-javascript-is-still-better-than-python</a> [Accessed 27 October 2021].<br>
+            <span style="color: #e84d00;">[6] </span>Habr. 2019. Python vs JavaScript: Which One Can Benefit You The Most?. [online] Available at: <a href="https://habr.com/en/post/471134/" style="color: #00a2e8">https://habr.com/en/post/471134/</a> [Accessed
+            27 October 2021].<br>
+            <span style="color: #e84d00;">[7] </span>Stack Overflow. 2021. Stack Overflow Developer Survey 2021. [online] Available at: <a href="https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages"
+                style="color: #00a2e8">https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages</a> [Accessed 2 November 2021].<br>
+            <span style="color: #e84d00;">[8] </span>Imaginary Cloud. 2021. Next.js vs React: What are the differences?. [online] Available at: <a href="https://www.imaginarycloud.com/blog/next-js-vs-react/" style="color: #00a2e8">https://www.imaginarycloud.com/blog/next-js-vs-react/</a>            [Accessed 1 January 2022].<br>
+            <span style="color: #e84d00;">[9] </span>Da-14.com. 2017. Top 10 Advantages of Using React.js. [online] Available at: <a href=https://da-14.com/blog/its-high-time-reactjs-ten-reasons-give-it-try style="color: #00a2e8">https://da-14.com/blog/its-high-time-reactjs-ten-reasons-give-it-try</a>            [Accessed 7 November 2021].<br>
             <span style="color: #e84d00;">[10] </span>Nextjs.org. n.d. Next.js by Vercel - The React Framework. [online] Available at: <a href=https://nextjs.org style="color: #00a2e8">https://nextjs.org</a> [Accessed 2 November 2021].<br>
-            <span style="color: #e84d00;">[11] </span>freeCodeCamp.org. 2020. Why You Should Learn Next.js as a React Developer. [online] Available at: <a href="https://www.freecodecamp.org/news/why-you-should-learn-next-js-as-a-react-developer/" style="color: #00a2e8">https://www.freecodecamp.org/news/why-you-should-learn-next-js-as-a-react-developer/</a> [Accessed 14 November 2021].<br>
-            <span style="color: #e84d00;">[12] </span>Educative: Interactive Courses for Software Developers. n.d. What is code splitting in Next.js?. [online] Available at: <a href=https://www.educative.io/edpresso/what-is-code-splitting-in-nextjs style="color: #00a2e8">https://www.educative.io/edpresso/what-is-code-splitting-in-nextjs</a> [Accessed 18 November 2021].<br>
-            <span style="color: #e84d00;">[13] </span>Cook, P., 2019. D3 or Chart.js for Data Visualisation?. [online] Createwithdata.com. Available at: <a href=https://www.createwithdata.com/d3js-or-chartjs style="color: #00a2e8">https://www.createwithdata.com/d3js-or-chartjs</a>[Accessed 6 December 2021].<br>
-            <span style="color: #e84d00;">[14] </span>Nextjs.org. n.d. Advanced Features: Automatic Static Optimization | Next.js. [online] Available at: <a href=https://nextjs.org/docs/advanced-features/automatic-static-optimization style="color: #00a2e8">https://nextjs.org/docs/advanced-features/automatic-static-optimization</a> [Accessed 5 November 2021].<br>
-            <span style="color: #e84d00;">[15] </span>NHS Digital. n.d. NHS Care Identity Service 2. [online] Available at: <a href=https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2 style="color: #00a2e8">https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2</a> [Accessed 20 November 2021].<br>
-            <span style="color: #e84d00;">[16] </span>Aoe.com. n.d. Keycloak: Secure & easy Identity & Access Management. [online] Available at: <a href=https://www.aoe.com/en/expertise/keycloak.html style="color: #00a2e8">https://www.aoe.com/en/expertise/keycloak.html</a> [Accessed 25 November 2021].<br>
-            <span style="color: #e84d00;">[17] </span>AG, I., n.d. Keycloak Benefits. [online] Keycloak.ch. Available at: <a href=https://keycloak.ch/keycloak-benefits style="color: #00a2e8">https://keycloak.ch/keycloak-benefits</a> [Accessed 30 November 2021].<br>
+            <span style="color: #e84d00;">[11] </span>freeCodeCamp.org. 2020. Why You Should Learn Next.js as a React Developer. [online] Available at: <a href="https://www.freecodecamp.org/news/why-you-should-learn-next-js-as-a-react-developer/" style="color: #00a2e8">https://www.freecodecamp.org/news/why-you-should-learn-next-js-as-a-react-developer/</a>            [Accessed 14 November 2021].<br>
+            <span style="color: #e84d00;">[12] </span>Educative: Interactive Courses for Software Developers. n.d. What is code splitting in Next.js?. [online] Available at: <a href=https://www.educative.io/edpresso/what-is-code-splitting-in-nextjs style="color: #00a2e8">https://www.educative.io/edpresso/what-is-code-splitting-in-nextjs</a>            [Accessed 18 November 2021].<br>
+            <span style="color: #e84d00;">[13] </span>Cook, P., 2019. D3 or Chart.js for Data Visualisation?. [online] Createwithdata.com. Available at: <a href=https://www.createwithdata.com/d3js-or-chartjs style="color: #00a2e8">https://www.createwithdata.com/d3js-or-chartjs</a>[Accessed
+            6 December 2021].<br>
+            <span style="color: #e84d00;">[14] </span>Nextjs.org. n.d. Advanced Features: Automatic Static Optimization | Next.js. [online] Available at: <a href=https://nextjs.org/docs/advanced-features/automatic-static-optimization style="color: #00a2e8">https://nextjs.org/docs/advanced-features/automatic-static-optimization</a>            [Accessed 5 November 2021].<br>
+            <span style="color: #e84d00;">[15] </span>NHS Digital. n.d. NHS Care Identity Service 2. [online] Available at: <a href=https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2 style="color: #00a2e8">https://digital.nhs.uk/services/identity-and-access-management/nhs-care-identity-service-2</a>            [Accessed 20 November 2021].<br>
+            <span style="color: #e84d00;">[16] </span>Aoe.com. n.d. Keycloak: Secure & easy Identity & Access Management. [online] Available at: <a href=https://www.aoe.com/en/expertise/keycloak.html style="color: #00a2e8">https://www.aoe.com/en/expertise/keycloak.html</a>            [Accessed 25 November 2021].<br>
+            <span style="color: #e84d00;">[17] </span>AG, I., n.d. Keycloak Benefits. [online] Keycloak.ch. Available at: <a href=https://keycloak.ch/keycloak-benefits style="color: #00a2e8">https://keycloak.ch/keycloak-benefits</a> [Accessed 30 November
+            2021].
+            <br>
             <span style="color: #e84d00;">[18] </span>Team, K., n.d. Keycloak. [online] Keycloak.org. Available at: <a href=https://www.keycloak.org style="color: #00a2e8">https://www.keycloak.org</a> [Accessed 30 November 2021].<br>
         </div>
 
@@ -348,24 +308,25 @@
 
     <!-- contents -->
 
-	<!-- footer bottom -->
-	<div class="container">
+    <!-- footer bottom -->
+    <div class="container">
         <div class="footer-bottom box-content section-bottom-only">
             <span>Copyright © 2021-2022 CareQualityDashboard, UCL IXN Team 13. All Rights Reserved.</span>
         </div>
     </div>
-	<!-- end footer bottom -->
+    <!-- end footer bottom -->
 
-	<!-- script -->
-	<script src="static/js/jquery-3.5.1.min.js"></script>
-	<script src="static/js/bootstrap.bundle.min.js"></script>
-	<script src="static/js/magnific-popup.min.js"></script>
-	<script src="static/js/fakeLoader.min.js"></script>
-	<script src="static/js/swiper-bundle.min.js"></script>
-	<script src="static/js/contact-form.js"></script>
-	<script src="static/js/jquery.nav.js"></script>
-	<script src="static/js/main.js"></script>
-	<!-- end script -->
+    <!-- script -->
+    <script src="static/js/jquery-3.5.1.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/magnific-popup.min.js"></script>
+    <script src="static/js/fakeLoader.min.js"></script>
+    <script src="static/js/swiper-bundle.min.js"></script>
+    <script src="static/js/contact-form.js"></script>
+    <script src="static/js/jquery.nav.js"></script>
+    <script src="static/js/main.js"></script>
+    <!-- end script -->
 
 </body>
+
 </html>

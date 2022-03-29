@@ -129,7 +129,7 @@
 
         <div class="h4 text-center" style="padding-bottom: 1em;">
             For a given dashboard most users can navigate to the statistics page where they can view a graph of their overall progress. The score for each standard is stored from a number between 0 to 4. Therefore, the best way to represent this data is to convert
-            each score to a percentage. As a result, we get a line chart with the Score (as a percentage) on the Y-axis and the Time (in Days) on the X-axis. This is done by using the following SQL query:
+            each score to a percentage. As a result, we get a line chart with the Score (as a percentage) on the Y-axis and the Time (in Days) on the X-axis.
             <br>
             <br>
 
@@ -137,8 +137,9 @@
 
             <br>
             <br> The system makes use of the <code>Line</code> component from the <code>react-chartjs-2</code> library which is a react wrapper for the Chart.js library. Since Chart.js is a client-side JavaScript library we are required to have a specific
-            format to render the graph. Therefore, we created another react component called <code>LineChart</code> to format the data from our API call to our PostgreSQL to correctly feed it into the Chart.js <code>Line</code> component. Following the
-            Chart.js documentation, we can can utilise the legend selection to filter the line chart when the graph may be too complicated to analyse invidual health and care standards.
+            format to render the graph. Therefore, we created another react component called <code>LineChart</code> to format the data from our API call to our PostgreSQL to correctly feed it into the Chart.js <code>Line</code> component. Before formatting
+            our data, we use a GET request to <code>/api/responses</code> to retrieve all relevant data for a user. Also, following the Chart.js documentation, we can can utilise the legend selection to filter the line chart when the graph may be too
+            complicated to analyse invidual health and care standards.
             <br>
             <br>
 
