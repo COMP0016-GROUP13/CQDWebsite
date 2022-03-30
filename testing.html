@@ -1,33 +1,35 @@
 <!-- Care Quality Dashboard Website-->
-<!-- Authors: COMP0016-Team13-Yipeng Qu, Ahmad Daniel-->
+<!-- Authors: Sarvesh Rajdev-->
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Testing</title>
-	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
 
-	<!-- font -->
-	<link href="static/css/css2.css" rel="stylesheet">
-	<!-- end font -->
 
-	<link rel="stylesheet" href="static/css/bootstrap.css">
-	<link rel="stylesheet" href="static/css/ionicons.min.css">
-	<link rel="stylesheet" href="static/css/magnific-popup.css">
-	<link rel="stylesheet" href="static/css/fakeLoader.min.css">
-	<link rel="stylesheet" href="static/css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="static/css/style.css">
+    <!-- font -->
+    <link href="static/css/css2.css" rel="stylesheet">
+    <!-- end font -->
+
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/ionicons.min.css">
+    <link rel="stylesheet" href="static/css/magnific-popup.css">
+    <link rel="stylesheet" href="static/css/fakeLoader.min.css">
+    <link rel="stylesheet" href="static/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
 
-	<!-- loader -->
-	<div class="fakeLoader"></div>
-	<!-- end loader -->
+    <!-- loader -->
+    <div class="fakeLoader"></div>
+    <!-- end loader -->
 
-	<!-- navbar -->
-	<div style="padding: 5% 0 5% 0;">
+    <!-- navbar -->
+    <div style="padding: 5% 0 5% 0;">
         <nav class="navbar navbar-expand-md navbar-light fixed-top">
             <div class="container">
                 <a href="index.html" class="navbar-brand">
@@ -42,35 +44,35 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="requirements.html">Requirements</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="research.html">Research</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="uidesign.html">UI Design</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="systemdesign.html">System Design</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="implementation.html">Implementation</a>
                         </li>
-    
+
                         <li class="nav-item current">
                             <a class="nav-link" href="testing.html">Testing</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="evaluation.html">Evaluation</a>
                         </li>
-    
+
                         <li class="nav-item">
                             <a class="nav-link" href="appendices.html">Appendices</a>
                         </li>
@@ -79,7 +81,7 @@
             </div>
         </nav>
     </div>
-	<!-- end navbar -->
+    <!-- end navbar -->
 
     <!-- contents -->
     <div class="container" style="padding: 0 0 5% 0;">
@@ -94,19 +96,11 @@
         </h2>
         <br>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            After doing some research on how to test React and Next.js projects we learnt that a common method is by utilising 
-            <a href="https://jestjs.io" style="color: #1CBBFF">Jest</a> and <a href="https://enzymejs.github.io/enzyme/" style="color: #1CBBFF">Enzyme</a>.
-
-            Enzyme allows us to manipulate or use components in our test suite using built-in methods such as mount (to simulate a component for 
-            testing purposes) and simulate (to simulate interactions with components like clicks).
-            
-            Jest, on the other hand, is an assertion library and test runner. It is an open source JavaScript testing framework which
-            is very well documented and has a wide range of APIs which gives us great flexibility to test in a variety of different ways. 
-            Another advantage of Jest is that tests are isolated and 
-            can be parallelized which allowed us to create a huge test suite that can be run in seconds.
-            
-            For testing our front-end, we had created 22 test suites with 71 tests in total. After running them, we managed to pass 
-            all 71 tests as seen in the diagram below:<br><br>
+            After doing some research on how to test React and Next.js projects we learnt that a common method is by utilising
+            <a href="https://jestjs.io" style="color: #1CBBFF">Jest</a> and <a href="https://enzymejs.github.io/enzyme/" style="color: #1CBBFF">Enzyme</a>. Enzyme allows us to manipulate or use components in our test suite using built-in methods such
+            as mount (to simulate a component for testing purposes) and simulate (to simulate interactions with components like clicks). Jest, on the other hand, is an assertion library and test runner. It is an open source JavaScript testing framework
+            which is very well documented and has a wide range of APIs which gives us great flexibility to test in a variety of different ways. Another advantage of Jest is that tests are isolated and can be parallelized which allowed us to create a huge
+            test suite that can be run in seconds. For testing our front-end, we had created 22 test suites with 71 tests in total. After running them, we managed to pass all 71 tests as seen in the diagram below:<br><br>
 
             <div class="container">
                 <div class="row">
@@ -122,23 +116,12 @@
         </h2>
         <br>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            Continuing from the previous year's iteration, we decided not to unit test the API, because of the complications that may arise when 
-            isolating the logic of the APIs from the network handling and database interactions. Therefore, we will again be 
-            performing integration testing on our REST API to test the Next.js route handling through to the database interactions.
-
-            We discovered a Node package, <code>openapi-response</code> that links with jest-openapi to assert HTTP responses to match 
-            our OpenAPI specification. One major benefit being that we can use our OpenAPI specification in part for testing 
-            too, so we don't have to write code again to check for response structure when we already have it in our OpenAPI specification.<br><br>
-            
-            One major problem with the backend testing is that every action creates unnecessary data that could affect other 
-            actions further down the line. We want to isolate not units but whole systems/networks to retrieve correct data 
-            from the database. This is why we implement a script (<code>api-test.environment.js</code>) that cleans and add certain seed 
-            data for us to use in each test. The script is ran before every test for the system to use and utilises 
-            <code>Jest Test Environments</code>
-            for the teardowns.
-            
-            Overall our back-end struggled with responses and words due to different implementations of the scores and dashboards. 
-            However, our dashboard still passed all 190 tests from our 13 test suites. The results are illustrated in the following diagram: <br><br>
+            Continuing from the previous year's iteration, we decided not to unit test the API, because of the complications that may arise when isolating the logic of the APIs from the network handling and database interactions. Therefore, we will again be performing
+            integration testing on our REST API to test the Next.js route handling through to the database interactions. We discovered a Node package, <code>openapi-response</code> that links with jest-openapi to assert HTTP responses to match
+            our OpenAPI specification. One major benefit being that we can use our OpenAPI specification in part for testing too, so we don't have to write code again to check for response structure when we already have it in our OpenAPI specification.<br><br>            One major problem with the backend testing is that every action creates unnecessary data that could affect other actions further down the line. We want to isolate not units but whole systems/networks to retrieve correct data from the database.
+            This is why we implement a script (<code>api-test.environment.js</code>) that cleans and add certain seed data for us to use in each test. The script is ran before every test for the system to use and utilises
+            <code>Jest Test Environments</code> for the teardowns. Overall our back-end struggled with responses and words due to different implementations of the scores and dashboards. However, our dashboard still passed all 190 tests from our 13 test
+            suites. The results are illustrated in the following diagram: <br><br>
 
             <div class="container">
                 <div class="row">
@@ -154,24 +137,13 @@
         </h2>
         <br>
         <div class="h4 text-center" style="padding-bottom: 1.5em;">
-            These aim to test the entire system as a whole from a user’s perspective, by programmatically navigating to the site, 
-            interacting with it, and asserting that the UI is updated and functions correctly at all times.
-
-            We are using <a href="https://github.com/puppeteer/puppeteer" style="color: #1CBBFF">Puppeteer</a>, a popular Node.js API to programmatically control Chrome, alongside Jest for these tests. 
-            However, Puppeteer does not come with all good things; we found that it is incompatible with our own global variables 
-            that refer to the page and the browser, thus we were limited to what the library gave us. Sometimes we found that the 
-            browser environment was not the same on all the machines and we had errors of <code>this.global.page.close</code> cannot be 
-            called as it is undefined in the environment. However, on some machines this would work perfectly. <br><br> 
-            
-            Overall we tried to create a codebase that worked on all machines.
-            After setting up the end-to-end testing framework, we began on writing the tests. We focused on covering all functionalities of our 
-            platform for ensuring that we were confident of having no bugs and that our platform is fully functional. We did this 
-            step-by-step by going through each use case of our platform and noting what actions these may require on our platform. 
-            We also focused on testing the security of our platform so we tested whether users with limited permissions could 
-            access parts of our platform that require more permissions.
-            
-            With a total of 13 tests, we were able to pass all of them on both Firefox and Chrome complying with compatibility testing
-            as seen in the diagram below:
+            These aim to test the entire system as a whole from a user’s perspective, by programmatically navigating to the site, interacting with it, and asserting that the UI is updated and functions correctly at all times. We are using <a href="https://github.com/puppeteer/puppeteer"
+                style="color: #1CBBFF">Puppeteer</a>, a popular Node.js API to programmatically control Chrome, alongside Jest for these tests. However, Puppeteer does not come with all good things; we found that it is incompatible with our own global variables
+            that refer to the page and the browser, thus we were limited to what the library gave us. Sometimes we found that the browser environment was not the same on all the machines and we had errors of <code>this.global.page.close</code> cannot
+            be called as it is undefined in the environment. However, on some machines this would work perfectly. <br><br> Overall we tried to create a codebase that worked on all machines. After setting up the end-to-end testing framework, we began on
+            writing the tests. We focused on covering all functionalities of our platform for ensuring that we were confident of having no bugs and that our platform is fully functional. We did this step-by-step by going through each use case of our platform
+            and noting what actions these may require on our platform. We also focused on testing the security of our platform so we tested whether users with limited permissions could access parts of our platform that require more permissions. With a
+            total of 13 tests, we were able to pass all of them on both Firefox and Chrome complying with compatibility testing as seen in the diagram below:
 
         </div>
 
@@ -180,28 +152,29 @@
                 <img class="mx-auto img-thumbnail" src="static/image/testing/sitetest.png" style="max-width: 70%;">
             </div>
         </div>
-</div>
+    </div>
 
     <!-- end contents -->
 
-	<!-- footer bottom -->
-	<div class="container">
+    <!-- footer bottom -->
+    <div class="container">
         <div class="footer-bottom box-content section-bottom-only">
             <span>Copyright © 2021-2022 CareQualityDashboard, UCL IXN Team 13. All Rights Reserved.</span>
         </div>
     </div>
-	<!-- end footer bottom -->
+    <!-- end footer bottom -->
 
-	<!-- script -->
-	<script src="static/js/jquery-3.5.1.min.js"></script>
-	<script src="static/js/bootstrap.bundle.min.js"></script>
-	<script src="static/js/magnific-popup.min.js"></script>
-	<script src="static/js/fakeLoader.min.js"></script>
-	<script src="static/js/swiper-bundle.min.js"></script>
-	<script src="static/js/contact-form.js"></script>
-	<script src="static/js/jquery.nav.js"></script>
-	<script src="static/js/main.js"></script>
-	<!-- end script -->
+    <!-- script -->
+    <script src="static/js/jquery-3.5.1.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/magnific-popup.min.js"></script>
+    <script src="static/js/fakeLoader.min.js"></script>
+    <script src="static/js/swiper-bundle.min.js"></script>
+    <script src="static/js/contact-form.js"></script>
+    <script src="static/js/jquery.nav.js"></script>
+    <script src="static/js/main.js"></script>
+    <!-- end script -->
 
 </body>
+
 </html>
