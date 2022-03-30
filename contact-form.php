@@ -1,4 +1,8 @@
 <?php
+/**
+ * Care Quality Dashboard Website
+ * Authors: COMP0016-Team13-Yipeng Qu
+ */
 // Configure Subject Prefix and Recipient
 $subjectPrefix = '[Contact via website]';
 $emailTo       = 'zcabyqu@ucl.ac.uk';
