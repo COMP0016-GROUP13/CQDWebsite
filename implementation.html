@@ -99,8 +99,8 @@
         </div>
 
         <div class="h4 text-center" style="padding-bottom: 1em;">
-            All authentication methods (login and registration) are handled by Keycloak. Currently, our Keycloak database runs within a dockerised container on our linode server. Using a custom realm file, we were able to instantiate roles for each specific type
-            of user on our system. When a user tries to securely login into our system with the keycloak portal, the authentication process is offloaded to Keycloak to check that the username and password is held within the keycloak database. However,
+            All authentication methods (login and registration) are handled securely by Keycloak. Currently, our Keycloak database runs within a dockerised container on our linode server. Using a custom realm file, we were able to instantiate roles for each specific
+            type of user on our system. When a user tries to securely login into our system with the keycloak portal, the authentication process is offloaded to Keycloak to check that the username and password is held within the keycloak database. However,
             by using Prisma as an ORM we can synchronize the data from the “Users” table from the keycloak database to our PostgreSQL database, which is hosted within a separate dockerised container.
         </div>
 
@@ -133,7 +133,7 @@
             <br>
             <br>
 
-            <img class="pic-pattern" src="./static/picture/graph.png" width="80%" alt="main line chart" class="img class="pic-pattern"-thumbnail">
+            <img class="pic-pattern" src="./static/picture/graph.png" width="80%" alt="main line chart" class="img class=" pic-pattern "-thumbnail">
 
             <br>
             <br> The system makes use of the <code>Line</code> component from the <code>react-chartjs-2</code> library which is a react wrapper for the Chart.js library. Since Chart.js is a client-side JavaScript library we are required to have a specific
@@ -147,7 +147,7 @@
                 Quick Summary
             </div>
             <br>
-            <img class="pic-pattern" src="./static/picture/quick_summary.png" width="90%" alt="quick summary" class="img class="pic-pattern"-thumbnail">
+            <img class="pic-pattern" src="./static/picture/quick_summary.png" width="90%" alt="quick summary" class="img class=" pic-pattern "-thumbnail">
             <br>
             <br> Quick Summary section of the statistics page shows a mean of all self-assessments taken for the given dashboard. The section comprises of a <code> Circle Accordion</code> which makes use of the built-in <code> Circle </code> component
             from react-suite. The process of calculating the average statistic for each health and safety standard is handled on the backend.
@@ -200,7 +200,7 @@
             <br>
             <br>
 
-            <img class="pic-pattern" src="./static/picture/completed_self_report.png " width="60% " alt="main line chart " class="img class="pic-pattern"-thumbnail ">
+            <img class="pic-pattern" src="./static/picture/completed_self_report.png " width="60% " alt="main line chart " class="img class=" pic-pattern "-thumbnail ">
 
         </div>
     </div>
@@ -223,17 +223,17 @@
             <br>
             <br>
 
-            <img class="pic-pattern" src="./static/image/implementation/EditQuestions.png" width="100%" alt="quick summary" class="img class="pic-pattern"-thumbnail">
+            <img class="pic-pattern" src="./static/image/implementation/EditQuestions.png" width="100%" alt="quick summary" class="img class=" pic-pattern "-thumbnail">
 
             <br>
             <br>
 
-            <img class="pic-pattern" src="./static/image/implementation/EditUrls.png" width="10%" alt="quick summary" class="img class="pic-pattern"-thumbnail">
+            <img class="pic-pattern" src="./static/image/implementation/EditUrls.png" width="10%" alt="quick summary" class="img class=" pic-pattern "-thumbnail">
 
             <br>
-            <br> Both these pages use PUT requests to their repective API's (<code>api/questions</code> and <code>api/questionURLs</code>) and because they are both different tables this is done quite easily. The query system again shows its utility here
-            as we can pass the dashboard_id in as a parameter to the API in order to recieve the currect set of questions linked to the dashboard. Furthermore the table component itself performs it's own API calls. Each row is linked to a key which is
-            standard practice for Next.js. The key in our system is also the question id which we can use to make a PUT or DELETE request to the api/question[id] endpoint. This efficient system make the codebase much cleaner and understandable.
+            <br> Both these pages use PUT requests to their respective API's (<code>api/questions</code> and <code>api/questionURLs</code>) and because they are both different tables this is done quite easily. The query system again shows its utility
+            here as we can pass the dashboard_id in as a parameter to the API in order to recieve the currect set of questions linked to the dashboard. Furthermore the table component itself performs it's own API calls. Each row is linked to a key which
+            is standard practice for Next.js. The key in our system is also the question id which we can use to make a PUT or DELETE request to the api/question[id] endpoint. This efficient system make the codebase much cleaner and understandable.
         </div>
 
 
@@ -248,7 +248,7 @@
             <br>
             <br>
 
-            <img class="pic-pattern" src="./static/image/implementation/view.png" width="90%" alt="quick summary" class="img class="pic-pattern"-thumbnail">
+            <img class="pic-pattern" src="./static/image/implementation/view.png" width="90%" alt="quick summary" class="img class=" pic-pattern "-thumbnail">
 
             <br>
             <br> While this page is simple, each dashboard button is linked to its respecitve dashboard id. Using URL query parameters (e.g <strong>*URL*?dashboard_id=*some number*</strong>) we are able to pass this ID around to all sub-pages. i.e the
@@ -279,7 +279,7 @@
                 <br>
                 <br>
 
-                <img class="pic-pattern" src="./static/image/implementation/adminMangage.png" width="90%" alt="manage Admin" class="img class="pic-pattern"-thumbnail">
+                <img class="pic-pattern" src="./static/image/implementation/adminMangage.png" width="90%" alt="manage Admin" class="img class=" pic-pattern "-thumbnail">
 
                 <br>
                 <br>
@@ -306,7 +306,7 @@
             <br>
             <br>
 
-            <img class="pic-pattern" src="./static/image/implementation/self-reporting.png" width="90%" alt="self report" class="img class="pic-pattern"-thumbnail">
+            <img class="pic-pattern" src="./static/image/implementation/self-reporting.png" width="90%" alt="self report" class="img class=" pic-pattern "-thumbnail">
 
             <br>
             <br>
@@ -333,7 +333,7 @@
             <br>
             <br>
 
-            <img class="pic-pattern" src="./static/image/implementation/error.png" width="90%" alt="error page" class="img class="pic-pattern"-thumbnail">
+            <img class="pic-pattern" src="./static/image/implementation/error.png" width="90%" alt="error page" class="img class=" pic-pattern "-thumbnail">
 
             <br>
             <br>
