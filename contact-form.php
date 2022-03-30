@@ -1,7 +1,7 @@
 <?php
 // Configure Subject Prefix and Recipient
 $subjectPrefix = '[Contact via website]';
-$emailTo       = 'zcabyqu@ucl.ac.uk';
+$emailTo       = '[example@mail.com]';
 
 $errors = array(); // array to hold validation errors
 $data   = array(); // array to pass back data
